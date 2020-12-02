@@ -2,4 +2,7 @@
 <resources>
     <!-- for 20dp of padding at 3.5px/dp at default density -->
     <dimen name="rounded_corner_content_padding">50px</dimen>
+
+    <!-- Bottom margin size when fingerprint in display is active -->
+    <dimen name="keyguard_indication_margin_bottom">16dp</dimen>
 </resources>
