@@ -39,6 +39,8 @@ $(call inherit-product, $(LOCAL_PATH)/platform/init_scripts.mk)
 PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Overlay
+$(call inherit-product, $(LOCAL_PATH)/platform/rro_overlay.mk)
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
