@@ -14,8 +14,7 @@
  * limitations under the License.
  */
 
-#ifndef ANDROID_INCLUDE_HARDWARE_FINGERPRINT_H
-#define ANDROID_INCLUDE_HARDWARE_FINGERPRINT_H
+#pragma once
 
 #include <hardware/hardware.h>
 #include <hardware/hw_auth_token.h>
@@ -273,5 +272,3 @@ typedef struct fingerprint_module {
      */
     struct hw_module_t common;
 } fingerprint_module_t;
-
-#endif  /* ANDROID_INCLUDE_HARDWARE_FINGERPRINT_H */
