@@ -16,6 +16,7 @@ media.stagefright.audio.deep=false
 
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
+bluetooth.profile.asha.central=true
 
 # Priv-app permissions whitelist
 ro.control_privapp_permissions=log
