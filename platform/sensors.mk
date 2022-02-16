@@ -9,4 +9,5 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     libsensorservice \
     libsensorservicehidl \
+    sensors.mona \
     vendor.qti.hardware.display.mapper@1.1.vendor
