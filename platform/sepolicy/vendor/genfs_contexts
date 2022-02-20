@@ -9,6 +9,7 @@ genfscon sysfs /devices/virtual/mi_display/disp_feature u:object_r:vendor_sysfs_
 
 # Fingerprint
 genfscon sysfs /devices/platform/soc/soc:fingerprint_goodix u:object_r:vendor_sysfs_fingerprint:s0
+genfscon sysfs /devices/virtual/touch/tp_dev/syna_gesture_fod_pressed  u:object_r:vendor_sysfs_sensors:s0
 
 # Touch
 genfscon sysfs /class/touch/touch_dev/palm_sensor u:object_r:vendor_sysfs_sensors:s0

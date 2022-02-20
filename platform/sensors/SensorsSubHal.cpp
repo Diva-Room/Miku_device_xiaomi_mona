@@ -33,6 +33,7 @@ using ::android::hardware::Void;
 using ::android::hardware::sensors::V2_0::implementation::ScopedWakelock;
 
 SensorsSubHal::SensorsSubHal() : mCallback(nullptr), mNextHandle(1) {
+    AddSensor<UdfpsSensor>();
     AddSensor<DoubleTapSensor>();
 }
 
