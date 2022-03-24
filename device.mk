@@ -13,7 +13,7 @@ PRODUCT_SOONG_NAMESPACES += \
 $(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
 
 # ANT+
