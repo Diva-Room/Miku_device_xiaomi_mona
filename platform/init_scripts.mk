@@ -4,13 +4,11 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/init/etc/fstab.default:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.default
-
 PRODUCT_PACKAGES += \
     charger_fstab.qti \
     charger_fw_fstab.qti \
     fstab.default \
+    fstab.default.vendor_ramdisk \
     init.batterysecret.rc \
     init.class_main.sh \
     init.kernel.post_boot-yupik.sh \
