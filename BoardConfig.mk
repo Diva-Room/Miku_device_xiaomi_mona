@@ -41,6 +41,9 @@ TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 TARGET_BOOTLOADER_BOARD_NAME := $(PLATFORM_NAME)
 TARGET_NO_BOOTLOADER := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
 # HIDL
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/platform/manifest/compatibility_matrix.xml
 
