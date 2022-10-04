@@ -1,5 +1,5 @@
 # Graphics
-debug.sf.disable_client_composition_cache=1
+debug.sf.disable_client_composition_cache=0
 
 # ODM
 ro.vendor.qti.va_odm.support=1
