@@ -37,3 +37,6 @@ PRODUCT_SHIPPING_API_LEVEL := 31
 
 # Partitions
 $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
+
+# Permissions
+$(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
