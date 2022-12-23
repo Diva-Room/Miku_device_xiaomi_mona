@@ -7,4 +7,8 @@
 # RIL
 PRODUCT_PACKAGES += \
     CarrierConfigOverlay 
+
+# WiFi
+PRODUCT_PACKAGES += \
+    WifiOverlay 
 	
