@@ -19,6 +19,9 @@ TARGET_SCREEN_WIDTH := 1080
 # Boot control
 $(call inherit-product, $(LOCAL_PATH)/platform/bootctrl/bootctrl.mk)
 
+# Dalvik VM configs
+$(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
