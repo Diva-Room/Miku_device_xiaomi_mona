@@ -38,6 +38,10 @@ $(call inherit-product, $(LOCAL_PATH)/platform/init_scripts.mk)
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
+# Overlay
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Partitions
 $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 
