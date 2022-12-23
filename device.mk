@@ -16,6 +16,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Boot control
+$(call inherit-product, $(LOCAL_PATH)/platform/bootctrl/bootctrl.mk)
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
