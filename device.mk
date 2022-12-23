@@ -32,6 +32,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # HIDL 
 $(call inherit-product, $(LOCAL_PATH)/platform/hidl.mk)
 
+# Init Scripts
+$(call inherit-product, $(LOCAL_PATH)/platform/init_scripts.mk)
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31
 
