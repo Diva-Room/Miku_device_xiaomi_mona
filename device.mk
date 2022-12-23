@@ -22,6 +22,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/bootctrl/bootctrl.mk)
 # Dalvik VM configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# GSI Keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
 # HIDL 
 $(call inherit-product, $(LOCAL_PATH)/platform/hidl.mk)
 
