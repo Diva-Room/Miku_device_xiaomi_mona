@@ -1,0 +1,19 @@
+# Display
+debug.sf.disable_backpressure=1
+persist.sys.enable_sf_boost=true
+ro.sf.lcd_density=440
+
+# LMK 
+persist.sys.minfree_def=73728,92160,110592,154832,482560,579072
+persist.sys.minfree_6g=73728,92160,110592,258048,663552,903168
+persist.sys.minfree_8g=73728,92160,110592,387072,1105920,1451520
+ro.lmk.use_minfree_levels=true
+
+# RIL
+persist.vendor.radio.report_codec=1
+persist.vendor.radio.redir_party_num=1
+persist.vendor.radio.enable_temp_dds=true
+ro.vendor.radio.features_common=3
+
+# Vendor
+ro.vendor.qti.va_aosp.support=1
