@@ -58,5 +58,8 @@ $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 # Permissions
 $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
 
+# RIL
+$(call inherit-product, $(LOCAL_PATH)/platform/ril.mk)
+
 # WiFi & WiFi Display
 $(call inherit-product, $(LOCAL_PATH)/platform/wifi_features.mk)
