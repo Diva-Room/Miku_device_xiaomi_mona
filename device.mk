@@ -61,5 +61,8 @@ $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permiss
 # RIL
 $(call inherit-product, $(LOCAL_PATH)/platform/ril.mk)
 
+# Sensors
+$(call inherit-product, $(LOCAL_PATH)/platform/sensors.mk)
+
 # WiFi & WiFi Display
 $(call inherit-product, $(LOCAL_PATH)/platform/wifi_features.mk)
