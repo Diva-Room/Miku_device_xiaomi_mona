@@ -22,6 +22,9 @@ AB_OTA_PARTITIONS += \
     vendor \
     vendor_boot
 
+# ANT+
+BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
+
 # Arch
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -78,6 +81,7 @@ TARGET_BOARD_PLATFORM := $(PLATFORM_NAME)
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+TARGET_USE_QTI_BT_STACK := true
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true

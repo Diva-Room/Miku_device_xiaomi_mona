@@ -8,6 +8,9 @@
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
@@ -16,8 +19,14 @@ $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Atrace
+PRODUCT_PACKAGES += android.hardware.atrace@1.0-service
+
 # Audio
 $(call inherit-product, $(LOCAL_PATH)/platform/audio.mk)
+
+# Bluetooth
+$(call inherit-product, $(LOCAL_PATH)/platform/bluetooth.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
@@ -26,14 +35,35 @@ TARGET_SCREEN_WIDTH := 1080
 # Boot control
 $(call inherit-product, $(LOCAL_PATH)/platform/bootctrl/bootctrl.mk)
 
+# Camera
+$(call inherit-product, $(LOCAL_PATH)/platform/camera.mk)
+
 # Dalvik VM configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
+# Display 
+$(call inherit-product, $(LOCAL_PATH)/platform/display.mk)
+
+# DRM
+$(call inherit-product, $(LOCAL_PATH)/platform/drm.mk)
+
+# Fastboot
+PRODUCT_PACKAGES += fastbootd
+
+# Fingerprint
+$(call inherit-product, $(LOCAL_PATH)/platform/fingerprint.mk)
+
+# Gatekeeper
+$(call inherit-product, $(LOCAL_PATH)/platform/gatekeeper.mk)
+
+# GPS
+$(call inherit-product, $(LOCAL_PATH)/platform/gps.mk)
 
 # GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+
+# Health
+$(call inherit-product, $(LOCAL_PATH)/platform/health.mk)
 
 # HIDL 
 $(call inherit-product, $(LOCAL_PATH)/platform/hidl.mk)
@@ -41,8 +71,17 @@ $(call inherit-product, $(LOCAL_PATH)/platform/hidl.mk)
 # Init Scripts
 $(call inherit-product, $(LOCAL_PATH)/platform/init_scripts.mk)
 
-# Shipping API level
-PRODUCT_SHIPPING_API_LEVEL := 31
+# IPACM
+$(call inherit-product, $(LOCAL_PATH)/platform/ipacm.mk)
+
+# Keymaster
+$(call inherit-product, $(LOCAL_PATH)/platform/keymaster.mk)
+
+# Media
+$(call inherit-product, $(LOCAL_PATH)/platform/media.mk)
+
+# Networks
+$(call inherit-product, $(LOCAL_PATH)/platform/networks.mk)
 
 # Overlay
 $(call inherit-product, $(LOCAL_PATH)/platform/rro_overlay.mk)
@@ -58,11 +97,35 @@ $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 # Permissions
 $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
 
+# Power
+$(call inherit-product, $(LOCAL_PATH)/platform/power.mk)
+
+# QCOM
+$(call inherit-product, $(LOCAL_PATH)/platform/qcom.mk)
+
 # RIL
 $(call inherit-product, $(LOCAL_PATH)/platform/ril.mk)
 
 # Sensors
 $(call inherit-product, $(LOCAL_PATH)/platform/sensors.mk)
+
+# Shipping API level
+PRODUCT_SHIPPING_API_LEVEL := 30
+
+# Telephony
+$(call inherit-product, $(LOCAL_PATH)/platform/telephony.mk)
+
+# Thermal
+$(call inherit-product, $(LOCAL_PATH)/platform/thermal.mk)
+
+# Update Engine
+$(call inherit-product, $(LOCAL_PATH)/platform/update_engine.mk)
+
+# USB
+$(call inherit-product, $(LOCAL_PATH)/platform/usb.mk)
+
+# Vendor service manager
+PRODUCT_PACKAGES += vndservicemanager
 
 # Vibrator
 $(call inherit-product, $(LOCAL_PATH)/platform/vibrator.mk)
