@@ -26,6 +26,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/bootctrl/bootctrl.mk)
 # Dalvik VM configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Get non-open-source specific aspects
+$(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
+
 # GSI Keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
@@ -51,3 +54,6 @@ $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 
 # Permissions
 $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
+
+# WiFi & WiFi Display
+$(call inherit-product, $(LOCAL_PATH)/platform/wifi_features.mk)
