@@ -37,6 +37,9 @@ TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := generic
 TARGET_2ND_CPU_VARIANT_RUNTIME := kryo385
 
+# Audio
+include $(DEVICE_PATH)/platform/audio_board_config.mk
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := $(PLATFORM_NAME)
 TARGET_NO_BOOTLOADER := true

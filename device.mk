@@ -16,6 +16,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
 PRODUCT_PACKAGES += \
     fs_config_files
 
+# Audio
+$(call inherit-product, $(LOCAL_PATH)/platform/audio.mk)
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
