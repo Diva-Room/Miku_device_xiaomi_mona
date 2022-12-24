@@ -64,5 +64,8 @@ $(call inherit-product, $(LOCAL_PATH)/platform/ril.mk)
 # Sensors
 $(call inherit-product, $(LOCAL_PATH)/platform/sensors.mk)
 
+# Vibrator
+$(call inherit-product, $(LOCAL_PATH)/platform/vibrator.mk)
+
 # WiFi & WiFi Display
 $(call inherit-product, $(LOCAL_PATH)/platform/wifi_features.mk)
