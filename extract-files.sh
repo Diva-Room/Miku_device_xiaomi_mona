@@ -7,6 +7,10 @@
 
 function blob_fixup() {
     case "${1}" in
+        vendor/etc/camera/pureShot_parameter.xml \
+        |vendor/etc/camera/pureView_parameter.xml)
+            sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
+            ;;
         vendor/etc/camera/mona_motiontuning.xml)
             sed -i 's/xml=version="1.0"/xml version="1.0"/g' "${2}"
             ;;
