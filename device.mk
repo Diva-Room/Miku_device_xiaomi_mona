@@ -83,6 +83,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/media.mk)
 # Networks
 $(call inherit-product, $(LOCAL_PATH)/platform/networks.mk)
 
+# NFC
+$(call inherit-product, $(LOCAL_PATH)/platform/nfc.mk)
+
 # Overlay
 $(call inherit-product, $(LOCAL_PATH)/platform/rro_overlay.mk)
 
