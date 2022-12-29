@@ -269,7 +269,6 @@ vendor.gralloc.disable_ubwc=0
 ro.incremental.enable=yes
 
 # Media
-debug.stagefright.ccodec=1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
 media.aac_51_output_enabled=true
@@ -290,7 +289,6 @@ persist.sys.mms.write_lmkd=true
 qcom.hw.aac.encoder=true
 ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lahaina.api30
 ro.media.recorder-max-base-layer-fps = 60
-vendor.mm.enable.qcom_parser=16777207
 vendor.mm.enable.qcom_parser=16777215
 
 # NFC
