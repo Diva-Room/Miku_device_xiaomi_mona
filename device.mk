@@ -15,10 +15,6 @@ $(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
 
-# AID/fs configs
-PRODUCT_PACKAGES += \
-    fs_config_files
-
 # Atrace
 PRODUCT_PACKAGES += android.hardware.atrace@1.0-service
 
