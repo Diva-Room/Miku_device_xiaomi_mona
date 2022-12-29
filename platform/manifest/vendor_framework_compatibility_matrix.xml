@@ -94,7 +94,7 @@
             <instance>wigigp2p</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="false">
+    <hal format="hidl" optional="true">
         <name>com.fingerprints.extension</name>
         <version>3.0</version>
         <interface>
@@ -102,7 +102,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="false">
+    <hal format="hidl" optional="true">
         <name>com.fingerprints.extension</name>
         <version>3.0</version>
         <interface>
@@ -981,7 +981,7 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="false">
+    <hal format="hidl" optional="true">
         <name>vendor.xiaomi.hardware.dtool</name>
         <version>1.0</version>
         <interface>
