@@ -1016,6 +1016,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint 
+-vendor/etc/vintf/manifest/fod.xml
 vendor/lib64/hw/fingerprint.goodix_fod.so
 
 # Gatekeeper
@@ -1028,6 +1029,7 @@ vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
 vendor/bin/xtra-daemon
+-vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
