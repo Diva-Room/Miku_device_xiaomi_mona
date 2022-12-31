@@ -1,4 +1,4 @@
-# Copyright (c) 2009-2012, 2014-2021, The Linux Foundation. All rights reserved.
+# Copyright (c) 2009-2012, 2014-2020, The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -84,9 +84,7 @@ on early-boot
     # set RLIMIT_MEMLOCK to 64MB
     setrlimit 8 67108864 67108864
     # Allow subsystem (modem etc) debugging
-    wait  /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
-    wait  /sys/kernel/boot_cdsp/boot
     write /sys/kernel/boot_cdsp/boot 1
     write /sys/devices/virtual/npu/msm_npu/boot 1
     write /sys/devices/virtual/cvp/cvp/boot 1
@@ -512,6 +510,8 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wcd_cpe0/fw_name
     #Reinit lmkd to reconfigure lmkd properties
     setprop lmkd.reinit 1
+    # dump qrtr-lookup table to file
+    start qrtr-lookup
 
 on property:persist.vendor.radio.atfwd.start=false
     stop vendor.atfwd
@@ -766,7 +766,7 @@ service wifi-crda /vendor/bin/init.crda.sh
 
 on property:sys.boot_completed=1
     start qcom-post-boot
-#    start qti-testscripts
+    start qti-testscripts
     start qrtr-lookup
 
 on property:ro.vendor.ril.mbn_copy_completed=1
@@ -852,9 +852,9 @@ on property:persist.sys.qlogd=0
     stop qlogd
 
 service vm_bms /vendor/bin/vm_bms
-    class main
     user root
-    group system wakelock
+    group root
+    disabled
 
 service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
@@ -982,3 +982,15 @@ service qrtr-lookup /vendor/bin/qrtr-lookup
     group system
     disabled
     oneshot
+
+service hapticlmgScreencap /system/bin/haptic_imgproc
+    class main
+    user root
+    group root
+    disabled
+
+service hapticGetEvent /system/bin/getevent
+    class main
+    user root
+    group root
+    disabled

@@ -61,7 +61,7 @@ function configure_zram_parameters() {
 		if [ -f /sys/block/zram0/use_dedup ]; then
 			echo 1 > /sys/block/zram0/use_dedup
 		fi
-		# echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
+		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
 
 		# ZRAM may use more memory than it saves if SLAB_STORE_USER
 		# debug option is enabled.
@@ -123,7 +123,6 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
 	echo 1 > /proc/sys/vm/watermark_scale_factor
 
@@ -138,7 +137,10 @@ function configure_memory_parameters() {
 	fi
 
 	echo $LimitSize > /dev/memcg/camera/provider/memory.soft_limit_in_bytes
-	echo 0 > /proc/sys/vm/watermark_boost_factor
+	
+	if [ $MemTotal -le 8388608 ]; then
+		echo 0 > /proc/sys/vm/watermark_boost_factor
+	fi
 }
 
 rev=`cat /sys/devices/soc0/revision`
@@ -191,7 +193,7 @@ echo 325 > /proc/sys/kernel/walt_low_latency_task_threshold
 # cpuset parameters
 echo 0-2 > /dev/cpuset/background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
-echo 4-7 > /dev/cpuset/foreground/boost/cpus
+echo " " > /dev/cpuset/foreground/boost/cpus
 echo 0-2,4-7 > /dev/cpuset/foreground/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
 
@@ -219,7 +221,7 @@ fi
 echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
 
 # configure powerkey boost settings
-echo "0:0 1:0 2:0 3:0 4:2016000 5:0 6:0 7:0" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
+echo "0:1804800 1:0 2:0 3:0 4:2419200 5:0 6:0 7:2841600" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
 echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 # configure governor settings for gold cluster

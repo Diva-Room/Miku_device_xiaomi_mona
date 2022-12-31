@@ -33,6 +33,7 @@ import /vendor/etc/init/hw/init.qti.kernel.rc
 import /vendor/etc/init/hw/init.mi_thermald.rc
 import /vendor/etc/init/hw/init.batterysecret.rc
 import /vendor/etc/init/init.charge_logger.rc
+import /vendor/etc/init/hw/init.xiaomi.camera.rc
 
 on early-init
     exec u:r:vendor_modprobe:s0 -- /vendor/bin/vendor_modprobe.sh
@@ -105,7 +106,7 @@ on fs
     chown system system /dev/tfa_rw
     chown system system /dev/tfa_rpc
     chown system system /dev/tfa_control
-    chmod 0666 /sys/class/smartpa/re25_calib
+    chmod 0660 /sys/class/smartpa/re25_calib
     chmod 0660 /dev/tfa_reg
     chmod 0660 /dev/tfa_rw
     chmod 0660 /dev/tfa_rpc
@@ -123,7 +124,6 @@ on post-fs
 on late-fs
     wait_for_prop hwservicemanager.ready true
     #exec_start wait_for_keymaster
-    start console
     mount_all --late
 
 on post-fs-data
@@ -138,7 +138,6 @@ on post-fs-data
     mkdir /data/vendor/nfc 0777 nfc nfc
     mkdir /mnt/vendor/persist/qxwz 0770 gps system
     mkdir /data/vendor/qxwz 0770 gps system
-    mkdir /data/vendor/perfspy 0775 camera camera
     chmod 0660 /dev/al6021
     chown system camera /dev/al6021
 
@@ -182,21 +181,21 @@ on post-fs-data
 on post-fs-data
     chmod 0666 /dev/migt
     restorecon /dev/migt
-    chmod 0666 /sys/module/migt/parameters/migt_freq
+    chmod 0777 /sys/module/migt/parameters/migt_freq
     restorecon /sys/module/migt/parameters/migt_freq
-    chmod 0666 /sys/module/migt/parameters/migt_ms
+    chmod 0777 /sys/module/migt/parameters/migt_ms
     restorecon /sys/module/migt/parameters/migt_ms
-    chmod 0666 /sys/module/migt/parameters/migt_thresh
+    chmod 0777 /sys/module/migt/parameters/migt_thresh
     restorecon /sys/module/migt/parameters/migt_thresh
-    chmod 0666 /sys/module/migt/parameters/boost_policy
+    chmod 0777 /sys/module/migt/parameters/boost_policy
     restorecon /sys/module/migt/parameters/boost_policy
-    chmod 0666 /sys/module/migt/parameters/fps_variance_ratio
+    chmod 0777 /sys/module/migt/parameters/fps_variance_ratio
     restorecon /sys/module/migt/parameters/fps_variance_ratio
-    chmod 0666 /sys/module/migt/parameters/super_task_max_num
+    chmod 0777 /sys/module/migt/parameters/super_task_max_num
     restorecon /sys/module/migt/parameters/super_task_max_num
-    chmod 0666 /sys/module/migt/parameters/migt_ceiling_freq
+    chmod 0777 /sys/module/migt/parameters/migt_ceiling_freq
     restorecon /sys/module/migt/parameters/migt_ceiling_freq
-    chmod 0666 /sys/module/migt/parameters/stask_candidate_num
+    chmod 0777 /sys/module/migt/parameters/stask_candidate_num
     restorecon /sys/module/migt/parameters/stask_candidate_num
     chmod 0666 /sys/module/migt/parameters/glk_disable
     restorecon /sys/module/migt/parameters/glk_disable
@@ -212,24 +211,7 @@ on post-fs-data
     restorecon /sys/module/migt/parameters/force_stask_to_big
     chmod 0666 /sys/module/migt/parameters/force_reset_runtime
     restorecon /sys/module/migt/parameters/force_reset_runtime
-    chmod 0666 /sys/module/migt/parameters/mi_viptask
-    restorecon /sys/module/migt/parameters/mi_viptask
     mkdir /data/vendor/misc/display 0771 system system
-
-    chown root system /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_lclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_mclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/add_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/del_bclus_affinity_uidlist
-    chown root system /sys/module/migt/parameters/reset_clus_affinity_uidlist
-    chmod 0664 /sys/module/migt/parameters/reset_clus_affinity_uidlist
 
 on early-boot
     start vendor.sensors
@@ -239,8 +221,6 @@ on early-boot
 
 on boot
     chown system system /sys/class/thermal/thermal_message/sconfig
-    chown system system /sys/class/thermal/thermal_message/balance_mode
-    chown system system /sys/class/thermal/thermal_message/charger_temp
     write /dev/cpuset/audio-app/cpus 1-2
     # Add a cpuset for the camera daemon
     # We want all cores for camera
@@ -358,8 +338,6 @@ on property:vendor.audio.cit.spkcal.copy=true
     chmod 666 /mnt/vendor/persist/audio/cs35l41_cal_right.txt
     copy /data/vendor/cit/tfa9894_chk.txt /mnt/vendor/persist/audio/tfa9894_chk.txt
     chmod 666 /mnt/vendor/persist/audio/tfa9894_chk.txt
-    copy /data/vendor/cit/aw88263_chk.txt /mnt/vendor/persist/audio/aw88263_chk.txt
-    chmod 666 /mnt/vendor/persist/audio/aw88263_chk.txt
     copy /data/vendor/cit/cs35l45_cal_mt.bin /mnt/vendor/persist/audio/cs35l45_cal_mt.bin
     copy /data/vendor/cit/cs35l45_cal_md.bin /mnt/vendor/persist/audio/cs35l45_cal_md.bin
     copy /data/vendor/cit/cs35l45_cal_ft.bin /mnt/vendor/persist/audio/cs35l45_cal_ft.bin
@@ -573,6 +551,17 @@ on property:sys.lmkd.memory.compact=1
     setprop sys.lmkd.memory.compact 0
     write /proc/sys/vm/reclaim_pages ${sys.lmkd.memory.reclaim_pages}
     write /proc/sys/vm/compact_memory 1
+
+on property:sys.lmkd.memory.start_reclaim_in_video_record=1
+    setprop sys.lmkd.memory.start_reclaim_in_video_record 0
+    write /sys/kernel/cam_reclaim/config "0 1 1 200000 200000 0 0 12000000000"
+    write /sys/kernel/cam_reclaim/event 1
+
+on property:sys.lmkd.memory.start_reclaim_in_cam_boost=1
+    setprop sys.lmkd.memory.start_reclaim_in_cam_boost 0
+    write /sys/kernel/cam_reclaim/config "0 1 3 300000 300000 0 0 12000000000"
+    write /sys/kernel/cam_reclaim/event 1
+
 #fan-controller
 service fan_control_turn_on /vendor/bin/fan_control 1
     class late_start
@@ -585,3 +574,5 @@ service fan_control_turn_off /vendor/bin/fan_control 0
     user root
     disabled
     oneshot
+
+

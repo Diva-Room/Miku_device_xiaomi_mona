@@ -1,5 +1,5 @@
 #=============================================================================
-# Copyright (c) 2020 Qualcomm Technologies, Inc.
+# Copyright (c) 2020-2021 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -61,7 +61,7 @@ function configure_zram_parameters() {
 		if [ -f /sys/block/zram0/use_dedup ]; then
 			echo 1 > /sys/block/zram0/use_dedup
 		fi
-		#echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
+		echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
 
 		# ZRAM may use more memory than it saves if SLAB_STORE_USER
 		# debug option is enabled.
@@ -125,13 +125,17 @@ function configure_memory_parameters() {
 
 	configure_zram_parameters
 	configure_read_ahead_kb_values
-	echo 0 > /proc/sys/vm/page-cluster
 	echo 100 > /proc/sys/vm/swappiness
 
         # Disable wsf  beacause we are using efk.
         # wsf Range : 1..1000. So set to bare minimum value 1.
         echo 1 > /proc/sys/vm/watermark_scale_factor
-        echo 0 > /proc/sys/vm/watermark_boost_factor
+	
+	MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+	MemTotal=${MemTotalStr:16:8}
+	if [ $MemTotal -le 8388608 ]; then
+		echo 0 > /proc/sys/vm/watermark_boost_factor
+	fi
 
 	#Spawn 2 kswapd threads which can help in fast reclaiming of pages
 	echo 2 > /proc/sys/vm/kswapd_threads
@@ -183,8 +187,8 @@ echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus
 # cpuset parameters
 echo 0-2 > /dev/cpuset/background/cpus
 echo 0-3 > /dev/cpuset/system-background/cpus
-echo 4-6 > /dev/cpuset/foreground/boost/cpus
-echo 0-2,4-6 > /dev/cpuset/foreground/cpus
+echo 4-7 > /dev/cpuset/foreground/boost/cpus
+echo 0-2,4-7 > /dev/cpuset/foreground/cpus
 echo 0-7 > /dev/cpuset/top-app/cpus
 
 #io limit
@@ -205,8 +209,15 @@ echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
 # configure input boost settings
-echo "0:0 1:0 2:0 3:0 4:2131200 5:0 6:0 7:0" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
-echo 400 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+if [ $rev == "1.0" ]; then
+	echo "0:1382800" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+else
+	echo "0:1305600" > /sys/devices/system/cpu/cpu_boost/input_boost_freq
+fi
+echo 120 > /sys/devices/system/cpu/cpu_boost/input_boost_ms
+
+echo "0:1900800 1:0 2:0 3:0 4:2208000 5:0 6:0 7:2400000" > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_freq
+echo 400 > /sys/devices/system/cpu/cpu_boost/powerkey_input_boost_ms
 
 # configure governor settings for gold cluster
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy4/scaling_governor
