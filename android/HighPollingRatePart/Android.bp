@@ -1,0 +1,20 @@
+android_app {
+    name: "HighPollingRatePart",
+    defaults: ["SettingsLibDefaults"],
+
+    srcs: ["src/**/*.kt"],
+    resource_dirs: ["res"],
+
+    certificate: "platform",
+    platform_apis: true,
+    system_ext_specific: true,
+
+    static_libs: [
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
+
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+}

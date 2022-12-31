@@ -94,6 +94,9 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 # Partitions
 $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 
+# Parts
+$(call inherit-product, $(LOCAL_PATH)/android/parts.mk)
+
 # Permissions
 $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
 
