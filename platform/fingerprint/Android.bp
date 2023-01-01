@@ -1,8 +1,8 @@
 cc_binary {
-    name: "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mona",
+    name: "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mona",
     defaults: ["hidl_defaults"],
-    init_rc: ["android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mona.rc"],
-    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.1-service.xiaomi_mona.xml"],
+    init_rc: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mona.rc"],
+    vintf_fragments: ["android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mona.xml"],
     vendor: true,
     relative_install_path: "hw",
     srcs: [
@@ -17,6 +17,8 @@ cc_binary {
         "libhardware",
         "libutils",
         "android.hardware.biometrics.fingerprint@2.1",
+        "android.hardware.biometrics.fingerprint@2.2",
+        "android.hardware.biometrics.fingerprint@2.3",
     ],
 
 }
