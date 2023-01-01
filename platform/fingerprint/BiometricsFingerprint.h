@@ -20,10 +20,12 @@
 #include <log/log.h>
 #include <android/log.h>
 #include <hardware/hardware.h>
-#include <hardware/fingerprint.h>
 #include <hidl/MQDescriptor.h>
 #include <hidl/Status.h>
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
+#include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
+
+#include "fingerprint.h"
 
 namespace android {
 namespace hardware {
@@ -43,10 +45,14 @@ using ::android::hardware::hidl_vec;
 using ::android::hardware::hidl_string;
 using ::android::sp;
 
-struct BiometricsFingerprint : public IBiometricsFingerprint {
+using ::vendor::xiaomi::hardware::fingerprintextension::V1_0::IXiaomiFingerprint;
+
+struct BiometricsFingerprint : public IBiometricsFingerprint, public IXiaomiFingerprint {
 public:
     BiometricsFingerprint();
     ~BiometricsFingerprint();
+
+    status_t registerAsSystemService();
 
     // Method to wrap legacy HAL with BiometricsFingerprint class
     static IBiometricsFingerprint* getInstance();
@@ -69,7 +75,8 @@ public:
     Return<void> onFingerDown(uint32_t x, uint32_t y, float minor, float major) override;
     Return<void> onFingerUp() override;
 
-private:
+    Return<int32_t> extCmd(int32_t cmd, int32_t param) override;
+
     static fingerprint_device_t* openHal();
     static void notify(const fingerprint_msg_t *msg); /* Static callback for legacy HAL implementation */
     static Return<RequestStatus> ErrorFilter(int32_t error);
