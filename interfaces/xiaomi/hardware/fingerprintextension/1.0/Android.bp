@@ -1,0 +1,11 @@
+hidl_interface {
+    name: "vendor.xiaomi.hardware.fingerprintextension@1.0",
+    root: "vendor.xiaomi",
+    srcs: [
+        "IXiaomiFingerprint.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    gen_java: true,
+}
