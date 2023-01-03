@@ -6,7 +6,8 @@
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(LOCAL_PATH)
+    $(LOCAL_PATH) \
+    vendor/qcom/opensource/usb/etc
 
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
