@@ -130,7 +130,9 @@ vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
+vendor/lib/libresampler.so
 vendor/lib/libssrec.so
+vendor/lib64/libresampler.so
 
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
