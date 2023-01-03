@@ -6,4 +6,7 @@
 
 PRODUCT_PACKAGES += \
     android.hardware.sensors@2.1-service.xiaomi_mona-multihal \
+    libsensorndkbridge \
+    libsensorservice \
+    libsensorservicehidl \
     vendor.qti.hardware.display.mapper@1.1.vendor
