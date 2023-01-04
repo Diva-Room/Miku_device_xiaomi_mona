@@ -1061,7 +1061,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint 
 -vendor/etc/vintf/manifest/fod.xml
-vendor/lib64/hw/fingerprint.goodix_fod.so
+vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.lahaina.so
 
 # Gatekeeper
 vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti
