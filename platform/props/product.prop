@@ -9,3 +9,6 @@ audio.offload.video=true
 audio.deep_buffer.media=true
 ro.af.client_heap_size_kbyte=7168
 media.stagefright.audio.deep=false
+
+# Priv-app permissions whitelist
+ro.control_privapp_permissions=log
