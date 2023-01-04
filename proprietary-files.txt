@@ -2118,6 +2118,9 @@ vendor/firmware/vehicle_dacia_RTP.bin
 vendor/firmware/vehicle_moto_RTP.bin
 vendor/firmware/vehicle_plane_RTP.bin
 
+# VNDK
+vendor/etc/public.libraries.txt
+
 # VPP
 vendor/bin/hw/qconfigservice
 vendor/bin/vppservice
