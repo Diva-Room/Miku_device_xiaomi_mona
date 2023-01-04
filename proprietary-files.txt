@@ -132,6 +132,7 @@ vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
 vendor/lib/libresampler.so
 vendor/lib/libssrec.so
+vendor/lib/libvideoNS.so
 vendor/lib64/libresampler.so
 
 # Audio FX modules
@@ -547,6 +548,7 @@ vendor/etc/camera/xiaomi/thirdpartyjpegsnapshot.json
 vendor/etc/camera/xiaomi/thirdpartysnapshot.json
 vendor/firmware/CAMERA_ICP.elf
 vendor/firmware/CAMERA_ICP_170.elf
+vendor/lib/com.qti.settings.sm8350.so
 vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/camera/com.qti.actuator.mona_semco_s5kgw3_dw9800_wide.so
 vendor/lib64/camera/com.qti.actuator.mona_sunny_imx616_dw9714v_front.so
@@ -1064,6 +1066,7 @@ vendor/bin/xtra-daemon
 -vendor/etc/vintf/manifest/android.hardware.gnss@2.1-service-qti.xml
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml
 vendor/lib/libgps.utils.so
+vendor/lib/libloc_core.so
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so
 vendor/lib64/libaoa.so
 vendor/lib64/libcdfw.so
@@ -1074,6 +1077,7 @@ vendor/lib64/libizat_client_api.so
 vendor/lib64/libizat_core.so
 vendor/lib64/liblbs_core.so
 vendor/lib64/libloc_api_v02.so
+vendor/lib64/libloc_core.so
 vendor/lib64/libloc_socket.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
@@ -1091,6 +1095,17 @@ vendor/lib64/vendor.qti.gnss@3.0.so
 vendor/lib64/vendor.qti.gnss@4.0-service.so
 vendor/lib64/vendor.qti.gnss@4.0.so
 vendor/lib64/vendor.qti.hardware.qccsyshal@1.0.so
+
+# GNSS configs
+vendor/etc/apdr.conf
+vendor/etc/flp.conf
+vendor/etc/gpfspath_oem_config.xml
+vendor/etc/gps.conf
+vendor/etc/gps_diag.cfg
+vendor/etc/izat.conf
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+vendor/etc/xtwifi.conf
 
 # Graphics
 vendor/firmware/a615_zap.b00
