@@ -42,7 +42,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a76
 include $(DEVICE_PATH)/platform/audio_board_config.mk
 
 # Bootloader
-TARGET_BOOTLOADER_BOARD_NAME := $(PLATFORM_NAME)
+TARGET_BOOTLOADER_BOARD_NAME := mona
 TARGET_NO_BOOTLOADER := true
 
 # Build
