@@ -83,7 +83,7 @@ vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
 
 # Audio configs
-vendor/etc/audio/audio_policy_configuration.xml
+#vendor/etc/audio/audio_policy_configuration.xml
 vendor/etc/audio/sku_yupik/audio_effects.conf
 vendor/etc/audio/sku_yupik/audio_effects.xml
 vendor/etc/audio/sku_yupik/audio_io_policy.conf
