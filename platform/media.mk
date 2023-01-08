@@ -5,6 +5,8 @@
 #
 
 PRODUCT_PACKAGES += \
+    android.hardware.media.c2@1.0.vendor \
+    android.hardware.media.c2@1.1.vendor \
     libavservices_minijail \
     libavservices_minijail.vendor
 
@@ -20,6 +22,7 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_PACKAGES += \
     libcodec2_hidl@1.0.vendor \
+    libcodec2_hidl@1.1.vendor \
     libcodec2_vndk.vendor \
     libmm-omxcore \
     libOmxAacEnc \
