@@ -7,6 +7,9 @@ ro.sf.lcd_density=440
 # LMK 
 ro.lmk.use_minfree_levels=true
 
+# Media 
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
 # RIL
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.report_codec=1
