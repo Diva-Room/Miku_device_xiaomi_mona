@@ -26,6 +26,7 @@
 #include <vendor/xiaomi/hardware/fingerprintextension/1.0/IXiaomiFingerprint.h>
 
 #include "fingerprint.h"
+#include "xiaomi_touch.h"
 
 namespace android {
 namespace hardware {

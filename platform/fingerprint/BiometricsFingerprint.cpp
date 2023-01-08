@@ -19,11 +19,43 @@
 #include <hardware/hw_auth_token.h>
 
 #include <android-base/strings.h>
+#include <android-base/unique_fd.h>
 #include <hardware/hardware.h>
 #include "BiometricsFingerprint.h"
 
 #include <inttypes.h>
+#include <sys/ioctl.h>
 #include <unistd.h>
+
+#include <fstream>
+
+#define COMMAND_NIT 10
+#define PARAM_NIT_FOD 1
+#define PARAM_NIT_NONE 0
+
+#define FOD_STATUS_OFF 0
+#define FOD_STATUS_ON 1
+
+#define TOUCH_DEV_PATH "/dev/xiaomi-touch"
+#define TOUCH_ID 0
+#define TOUCH_MAGIC 'T'
+#define TOUCH_IOC_SET_CUR_VALUE _IO(TOUCH_MAGIC, SET_CUR_VALUE)
+#define TOUCH_IOC_GET_CUR_VALUE _IO(TOUCH_MAGIC, GET_CUR_VALUE)
+
+#define DISP_PARAM_PATH "/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param"
+#define DISP_PARAM_LOCAL_HBM_MODE "9"
+#define DISP_PARAM_LOCAL_HBM_OFF "0"
+#define DISP_PARAM_LOCAL_HBM_ON "1"
+
+namespace {
+
+template <typename T>
+static void set(const std::string& path, const T& value) {
+    std::ofstream file(path);
+    file << value;
+}
+
+}  // anonymous namespace
 
 namespace android {
 namespace hardware {
@@ -34,6 +66,8 @@ namespace implementation {
 
 // Supported fingerprint HAL version
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
+
+static android::base::unique_fd touch_fd_;
 
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
@@ -48,6 +82,8 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     }
+
+    touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
 }
 
 BiometricsFingerprint::~BiometricsFingerprint() {
@@ -176,6 +212,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 }
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
+    onFingerUp();
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -333,6 +370,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                         token).isOk()) {
                     ALOGE("failed to invoke fingerprint onAuthenticated callback");
                 }
+                getInstance()->onFingerUp();
             } else {
                 // Not a recognized fingerprint
                 if (!thisPtr->mClientCallback->onAuthenticated(devId,
@@ -368,10 +406,30 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
 
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,
                                                  float /* minor */, float /* major */) {
+    set(DISP_PARAM_PATH, std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " + DISP_PARAM_LOCAL_HBM_ON);
+
+    extCmd(COMMAND_NIT, PARAM_NIT_FOD);
+
+    int buf_status[MAX_BUF_SIZE] = {TOUCH_ID, Touch_Fod_Enable, FOD_STATUS_ON};
+    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf_status);
+
+    int buf_fod[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 1};
+    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf_fod);
+
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
+    extCmd(COMMAND_NIT, PARAM_NIT_NONE);
+
+    int buf_status[MAX_BUF_SIZE] = {TOUCH_ID, Touch_Fod_Enable, FOD_STATUS_OFF};
+    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf_status);
+
+    int buf_fod[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 0};
+    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf_fod);
+
+    set(DISP_PARAM_PATH, std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " + DISP_PARAM_LOCAL_HBM_OFF);
+
     return Void();
 }
 
