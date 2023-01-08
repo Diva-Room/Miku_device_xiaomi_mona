@@ -81,6 +81,8 @@ vendor/lib/rfsa/adsp/misound_karaoke_res.bin
 vendor/lib/rfsa/adsp/misound_karaokemix_res.bin
 vendor/lib/rfsa/adsp/misound_res_headphone.bin
 vendor/lib/rfsa/adsp/misound_res_spk.bin
+vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so
+vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so
 
 # Audio configs
 #vendor/etc/audio/audio_policy_configuration.xml
@@ -142,11 +144,13 @@ vendor/lib/libadm.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioparsers.so
 vendor/lib/libaudioroute_ext.so
+vendor/lib/libcomprcapture.so
 vendor/lib/libhdmipassthru.so
 vendor/lib/libqtigef.so
 vendor/lib/libresampler.so
 vendor/lib/libssrec.so
 vendor/lib/libvideoNS.so
+vendor/lib64/libcomprcapture.so
 vendor/lib64/libresampler.so
 
 # Audio FX modules
@@ -574,6 +578,18 @@ vendor/lib/libcamxstatscore.so
 vendor/lib/libcamxswispiqmodule.so
 vendor/lib/libcamxswprocessalgo.so
 vendor/lib/libcamxtintlessalgo.so
+vendor/lib/libjpege.so
+vendor/lib/libmctfengine_stub.so
+vendor/lib/libmialgo_ai_vision.so
+vendor/lib/libmialgoengine.so
+vendor/lib/libmmcamera_bestats.so
+vendor/lib/libmmcamera_cac3.so
+vendor/lib/libmmcamera_faceproc.so
+vendor/lib/libmmcamera_faceproc2.so
+vendor/lib/libmmcamera_lscv35.so
+vendor/lib/libmmcamera_mfnr.so
+vendor/lib/libmmcamera_mfnr_t4.so
+vendor/lib/libmmcamera_pdpc.so
 vendor/lib64/camera/com.qti.actuator.mona_semco_s5kgw3_dw9800_wide.so
 vendor/lib64/camera/com.qti.actuator.mona_sunny_imx616_dw9714v_front.so
 vendor/lib64/camera/com.qti.eeprom.mona_ofilm_imx355_gt24p64e_ultra_eeprom.so
@@ -713,6 +729,10 @@ vendor/lib64/com.qti.feature2.serializer.so
 vendor/lib64/com.qti.feature2.statsregeneration.so
 vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
+vendor/lib64/com.qti.settings.kamorta.so
+vendor/lib64/com.qti.settings.kodiak.so
+vendor/lib64/com.qti.settings.mannar.so
+vendor/lib64/com.qti.settings.sdm865.so
 vendor/lib64/com.qti.settings.sm8350.so
 vendor/lib64/com.qti.stats.common.so
 vendor/lib64/com.qualcomm.mcx.distortionmapper.so
@@ -724,8 +744,10 @@ vendor/lib64/hw/camera.xiaomi.so
 vendor/lib64/hw/com.qti.chi.override.so
 vendor/lib64/libAF.so
 vendor/lib64/libFlickerDet.so
+vendor/lib64/libI420colorconvert.so
 vendor/lib64/libMegviiFacepp-0.5.2.so
 vendor/lib64/libSNPE.so
+vendor/lib64/libTrueSight.so
 vendor/lib64/lib_sr_models.so
 vendor/lib64/libaidenoiser.so
 vendor/lib/libaidenoiserv2.so
@@ -759,6 +781,7 @@ vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
+vendor/lib64/libcapture_beautyeffect.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcom.xiaomi.debug.so
@@ -766,6 +789,7 @@ vendor/lib64/libcom.xiaomi.grallocutils.so
 vendor/lib64/libcom.xiaomi.metadatautils.so
 vendor/lib64/libcom.xiaomi.pluginutils.so
 vendor/lib64/libcvface_api.so
+vendor/lib64/libdeflicker.so
 vendor/lib64/libfocus.so
 vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
@@ -808,9 +832,12 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmpbase.so
 vendor/lib64/libofflinedump.so
 vendor/lib64/libofflinelog.so
+vendor/lib64/libomp.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopestriping.so
 vendor/lib64/libos.so
+vendor/lib64/libportrait_blur.so
+vendor/lib64/libpreview_beautyeffect.so
 vendor/lib64/libqll10.so
 vendor/lib64/libqllengine.so
 vendor/lib64/librelight_only.so
@@ -985,6 +1012,8 @@ vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpp_manager.so
 vendor/lib64/libdpps.so
+vendor/lib64/libgralloccore.so
+vendor/lib64/libgrallocutils.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqrtrclient.so
@@ -1319,10 +1348,31 @@ system_ext/lib/libmmparser_lite.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/vendor.qti.media.c2@1.0-service
+vendor/bin/init.qti.media.sh
+vendor/etc/init/init.qti.media.rc
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/media/video_system_specs.json
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_dolby_audio.xml
+vendor/etc/media_codecs_system_default_yupik.xml
+vendor/etc/media_codecs_vendor_audio.xml
+vendor/etc/media_codecs_performance.xml
+vendor/etc/media_codecs_performance_yupik_v0.xml
+vendor/etc/media_codecs_performance_yupik_v1.xml
+vendor/etc/media_codecs_with_dolby_yupik.xml
+vendor/etc/media_codecs_yupik_v0.xml
+vendor/etc/media_codecs_yupik_v1.xml
 vendor/etc/media_lahaina/video_system_specs.json
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
+vendor/etc/media_profiles_lahaina.xml
+vendor/etc/media_profiles_lahaina_vendor.xml
+vendor/etc/media_profiles_yupik_v1.xml
+vendor/etc/media_profiles_vendor.xml
+vendor/etc/media_profiles_yupik_v0.xml
+vendor/etc/media_profiles_yupik_v1.xml
 vendor/etc/media_shima_v1/video_system_specs.json
+vendor/etc/media_yupik_v0/video_system_specs.json
 vendor/etc/media_yupik_v1/video_system_specs.json
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy
@@ -1338,6 +1388,14 @@ vendor/lib/libqcodec2_platform.so
 vendor/lib/libqcodec2_utils.so
 vendor/lib/libqcodec2_v4l2codec.so
 vendor/lib64/libmmosal.so
+vendor/lib64/libqc2vppfilter.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_hooks.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
 
 # Media VPU FW 
 vendor/firmware/vpu20_1v.b00
