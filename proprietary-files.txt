@@ -1012,8 +1012,6 @@ vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpp_manager.so
 vendor/lib64/libdpps.so
-vendor/lib64/libgralloccore.so
-vendor/lib64/libgrallocutils.so
 vendor/lib64/libhdr_tm.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqrtrclient.so
