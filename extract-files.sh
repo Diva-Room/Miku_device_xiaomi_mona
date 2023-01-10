@@ -62,6 +62,9 @@ function blob_fixup() {
         |vendor/etc/camera/pureView_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
+        vendor/etc/init/init.mfp-daemon.rc)
+            sed -i "/seclabel/d" "${2}"
+            ;;
         vendor/etc/media_lahaina/video_system_specs.json \
         |vendor/etc/media_shima_v1/video_system_specs.json \
         |vendor/etc/media_yupik_v1/video_system_specs.json)
