@@ -1,1 +1,8 @@
 msm_drm.ko
+synaptics_tcm_core_module.ko
+synaptics_tcm_device.ko
+synaptics_tcm_diagnostics.ko
+synaptics_tcm_reflash.ko
+synaptics_tcm_spi.ko
+synaptics_tcm_testing.ko
+xiaomi_touch.ko
