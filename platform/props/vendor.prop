@@ -249,7 +249,6 @@ ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.kernel.qemu.gles=0
 ro.opengles.version=196610
-ro.sf.lcd_density=440
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
