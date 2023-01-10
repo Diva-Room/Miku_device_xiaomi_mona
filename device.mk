@@ -71,6 +71,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/init_scripts.mk)
 # IPACM
 $(call inherit-product, $(LOCAL_PATH)/platform/ipacm.mk)
 
+# IR
+$(call inherit-product, $(LOCAL_PATH)/platform/ir.mk)
+
 # Keymaster
 $(call inherit-product, $(LOCAL_PATH)/platform/keymaster.mk)
 

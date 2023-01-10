@@ -42,6 +42,10 @@ PRODUCT_COPY_FILES += \
     $(PERMISSIONS_SRC_DIR)/android.hardware.usb.accessory.xml:$(PERMISSIONS_COPY_OUT_DIR)/android.hardware.usb.accessory.xml \
     $(PERMISSIONS_SRC_DIR)/android.hardware.usb.host.xml:$(PERMISSIONS_COPY_OUT_DIR)/android.hardware.usb.host.xml
 
+# IR Permissions
+PRODUCT_COPY_FILES += \
+    $(PERMISSIONS_SRC_DIR)/android.hardware.consumerir.xml:$(PERMISSIONS_COPY_OUT_DIR)/etc/permissions/android.hardware.consumerir.xml
+
 # Misc Permissions
 PRODUCT_COPY_FILES += \
     $(PERMISSIONS_SRC_DIR)/android.software.verified_boot.xml:$(PERMISSIONS_COPY_OUT_DIR)/android.software.verified_boot.xml
