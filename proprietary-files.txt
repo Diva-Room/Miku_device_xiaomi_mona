@@ -1723,6 +1723,15 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
+# Touch Feature 
+vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service
+vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml
+vendor/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so
+vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so
+vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so
+
 # Touchscreen
 vendor/firmware/s3908p_xiaomi_k9b_spi.img
 
