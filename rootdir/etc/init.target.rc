@@ -290,10 +290,6 @@ on boot
     chown system system /dev/stmvl53l5
     write /sys/block/sda/queue/wbt_lat_usec 75000
 
-    # Touch Polling Rate
-    chown system system /sys/devices/virtual/touch/touch_dev/bump_sample_rate
-    chmod 0664 /sys/devices/virtual/touch/touch_dev/bump_sample_rate
-
     #chown/chmod input_suspend node as needed from mishow service
     chown system system /sys/class/qcom-battery/input_suspend
     chmod 774 /sys/class/qcom-battery/input_suspend
