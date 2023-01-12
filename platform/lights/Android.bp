@@ -1,0 +1,18 @@
+cc_binary {
+    name: "android.hardware.lights-service.qti.mona",
+    relative_install_path: "hw",
+    init_rc: ["android.hardware.lights-qti.mona.rc"],
+    vintf_fragments: ["android.hardware.lights-qti.mona.xml"],
+    vendor: true,
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "android.hardware.light-V2-ndk",
+    ],
+    srcs: [
+        "Lights.cpp",
+        "main.cpp",
+    ],
+}

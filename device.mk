@@ -81,6 +81,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/ir.mk)
 # Keymaster
 $(call inherit-product, $(LOCAL_PATH)/platform/keymaster.mk)
 
+# Light
+$(call inherit-product, $(LOCAL_PATH)/platform/light.mk)
+
 # Media
 $(call inherit-product, $(LOCAL_PATH)/platform/media.mk)
 
