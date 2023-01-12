@@ -60,9 +60,6 @@ $(call inherit-product, $(LOCAL_PATH)/platform/gatekeeper.mk)
 # GPS
 $(call inherit-product, $(LOCAL_PATH)/platform/gps.mk)
 
-# GSI Keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Health
 $(call inherit-product, $(LOCAL_PATH)/platform/health.mk)
 
