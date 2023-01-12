@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES += \
 
 # IR Permissions
 PRODUCT_COPY_FILES += \
-    $(PERMISSIONS_SRC_DIR)/android.hardware.consumerir.xml:$(PERMISSIONS_COPY_OUT_DIR)/etc/permissions/android.hardware.consumerir.xml
+    $(PERMISSIONS_SRC_DIR)/android.hardware.consumerir.xml:$(PERMISSIONS_COPY_OUT_DIR)/android.hardware.consumerir.xml
 
 # Misc Permissions
 PRODUCT_COPY_FILES += \
