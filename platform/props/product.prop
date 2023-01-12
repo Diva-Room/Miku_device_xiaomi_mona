@@ -1,3 +1,7 @@
+# ADB 
+ro.secure=0
+ro.adb.secure=0
+
 # Audio 
 audio.sys.noisy.broadcast.delay=500
 audio.sys.mute.latency.factor=2
