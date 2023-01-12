@@ -42,6 +42,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/camera.mk)
 # Dalvik VM configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
+# Developer GSI keys
+$(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
+
 # Display 
 $(call inherit-product, $(LOCAL_PATH)/platform/display.mk)
 
