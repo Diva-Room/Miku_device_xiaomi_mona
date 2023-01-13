@@ -17,6 +17,10 @@ include $(BOARD_CONFIG_PATH)/arch.mk
 # Audio
 include $(BOARD_CONFIG_PATH)/audio_board_config.mk
 
+# Bluetooth
+TARGET_DISABLE_BLUETOOTH_LE_READ_BUFFER_SIZE_V2 := true
+TARGET_DISABLE_BLUETOOTH_LE_SET_HOST_FEATURE := true
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := mona
 TARGET_NO_BOOTLOADER := true
