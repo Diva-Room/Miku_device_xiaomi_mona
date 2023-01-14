@@ -185,7 +185,6 @@ persist.sys.camera.boost.ext.mem=1048576
 persist.sys.camera.boost.reclaim.pages=524288
 persist.sys.camera.boost.threshold=2097152
 ro.hardware.camera=xiaomi
-vendor.camera.aux.packagelist=org.codeaurora.snapcam
 
 # CoreSight STM
 persist.debug.coresight.config=stm-events
