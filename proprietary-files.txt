@@ -756,11 +756,13 @@ vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/init/qdcmss.rc
 vendor/etc/mdss_dsi_k9b_42_02_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.xml
+vendor/etc/snapdragon_color_libs_config.xml
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libdpp_manager.so
 vendor/lib64/libdpps.so
 vendor/lib64/libhdr_tm.so
+vendor/lib64/libmi-stc-HW-modulate.so
 vendor/lib64/libqdcm-mode-parser.so
 vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
