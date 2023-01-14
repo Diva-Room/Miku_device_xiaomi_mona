@@ -29,7 +29,7 @@ TARGET_NO_BOOTLOADER := true
 include $(BOARD_CONFIG_PATH)/build_rules.mk
 
 # Display
-TARGET_SCREEN_DENSITY := 440
+include $(BOARD_CONFIG_PATH)/display_board_config.mk
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
