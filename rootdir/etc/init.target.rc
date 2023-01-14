@@ -574,6 +574,3 @@ service fan_control_turn_off /vendor/bin/fan_control 0
     user root
     disabled
     oneshot
-
-on property:sys.boot_completed=1
-    restart health-hal-2-1
