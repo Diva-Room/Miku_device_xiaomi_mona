@@ -776,7 +776,6 @@ vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
 # Display (Stock)
 vendor/etc/mdss_dsi_k9b_42_02_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.xml
-vendor/lib64/libmi-stc-HW-modulate.so
 
 # Display postprocessing - from Nothing Phone (1) A063_1.1.7
 vendor/bin/hw/vendor.display.color@1.0-service|347fda7fe824e405829e1772739e999937421a58
