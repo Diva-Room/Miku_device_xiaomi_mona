@@ -746,48 +746,50 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 # Consumer IR
 vendor/lib64/hw/consumerir.lahaina.so
 
-# Display
-vendor/bin/qdcmss
-vendor/etc/display/DPU660.xml
-vendor/etc/display/DPU670.xml
-vendor/etc/display/DPU720.xml
-vendor/etc/display/DPU7__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/init/qdcmss.rc
+# Display - from Nothing Phone (1) A063_1.1.7
+vendor/bin/qdcmss|2dd2d71247c85a1bb6b3168d53cd844cb387f75c
+vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
+vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
+vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
+vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
+vendor/etc/display/advanced_sf_offsets.xml|e145a0c0f975f6d924fbe7f18f531ae044ec3bef
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/etc/snapdragon_color_libs_config.xml|20be96679760b14cd63577a17f4a040e543254dd
+vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
+vendor/lib64/libdisplayskuutils.so|5afcd261783ca109c9d63e8d08c879b76fb4efd6
+vendor/lib64/libdpp_manager.so|5d6518f8f91a42eabad171759b1edce0720e14cc
+vendor/lib64/libdpps.so|a5ef371c8df8af548db93adbd8757d2bf3c73da8
+vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
+vendor/lib64/libqdcm-mode-parser.so|207143ab4dda0886bde2a0333d7a1bcd7af6f8e1
+vendor/lib64/libqrtrclient.so|51c55fea28fa475ae9b2c64592f32802e6ba6c25
+vendor/lib64/libqseed3.so|d62c37baf259250cadfcff8734e82054ed87bb96
+vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
+vendor/lib64/libsdm-color.so|aeb07689c1bfc885ef9c846c0148e6f1e3f7f0ac
+vendor/lib64/libsdm-colormgr-algo.so|5416a3b9b0735099c9b86f451f41386711787ea4
+vendor/lib64/libsdm-diag.so|720089c4bc66897e1bfd84e7983b3c34f2c4eec8
+vendor/lib64/libsdm-disp-vndapis.so|dc3ff8c971bbcb0d1b9e5079324d1d1d05a1fd39
+vendor/lib64/libsdmextension.so|85d04d20a022d79134eeba08bb4ec139d59e3479
+vendor/lib64/libsnapdragoncolor-manager.so|e7f55a1ba843bb570afa6bbf16bb61dc01ec74ea
+vendor/lib64/libsnapdragoncolor-qdcm.so|673c41753603bacb197674df567723dfd928384e
+vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
+
+# Display (Stock)
 vendor/etc/mdss_dsi_k9b_42_02_0a_dsc_cmd_mi.xml
 vendor/etc/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.xml
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libdpp_manager.so
-vendor/lib64/libdpps.so
-vendor/lib64/libhdr_tm.so
 vendor/lib64/libmi-stc-HW-modulate.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-diag.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/libtinyxml2_1.so
 
-# Display postprocessing
-vendor/bin/hw/vendor.display.color@1.0-service
-vendor/bin/ppd
-vendor/etc/init/vendor.display.color@1.0-service.rc
-vendor/lib64/libdisp-aba.so
-vendor/lib64/vendor.display.color@1.0.so
-vendor/lib64/vendor.display.color@1.1.so
-vendor/lib64/vendor.display.color@1.2.so
-vendor/lib64/vendor.display.color@1.3.so
-vendor/lib64/vendor.display.color@1.4.so
-vendor/lib64/vendor.display.color@1.5.so
-vendor/lib64/vendor.display.postproc@1.0.so
+# Display postprocessing - from Nothing Phone (1) A063_1.1.7
+vendor/bin/hw/vendor.display.color@1.0-service|347fda7fe824e405829e1772739e999937421a58
+vendor/bin/ppd|4fcb818e39c813570fdbfaa9726274986e190e04
+vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
+vendor/lib64/libdisp-aba.so|5c8ad123fb335a74bd573587924f93ac812594fd
+vendor/lib64/vendor.display.color@1.0.so|76e84677fefbe97a0c9d33646fca2834e77a3b6f
+vendor/lib64/vendor.display.color@1.1.so|3aa79bbf7592472d87c29f91a106141eff8a9a74
+vendor/lib64/vendor.display.color@1.2.so|8b5ed3c2b39aa38f6194f2ed3872166f88b8ad98
+vendor/lib64/vendor.display.color@1.3.so|1ff2c50e6b8c0bc95f3476aa5b066024e0fc9261
+vendor/lib64/vendor.display.color@1.4.so|6e4cffe7b1a287dee9c4fb9b8e08ddac50b916b4
+vendor/lib64/vendor.display.color@1.5.so|0474d3d9123fd38538a3cd1e3c267608d71b7126
+vendor/lib64/vendor.display.postproc@1.0.so|f82e704e275c25ef27ff37cdbbfb2360e53c2611
 
 # DPM
 system/framework/tcmclient.jar
@@ -939,7 +941,7 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# Graphics
+# Graphics firmware
 vendor/firmware/a615_zap.b00
 vendor/firmware/a615_zap.b01
 vendor/firmware/a615_zap.b02
@@ -954,40 +956,42 @@ vendor/firmware/a660_zap.b01
 vendor/firmware/a660_zap.b02
 vendor/firmware/a660_zap.elf
 vendor/firmware/a660_zap.mdt
-vendor/gpu/kbc/sequence_manifest.bin
-vendor/gpu/kbc/unified_kbcs_32.bin
-vendor/gpu/kbc/unified_kbcs_64.bin
-vendor/gpu/kbc/unified_ksqs.bin
-vendor/lib/egl/eglSubDriverAndroid.so
-vendor/lib/egl/libEGL_adreno.so
-vendor/lib/egl/libGLESv1_CM_adreno.so
-vendor/lib/egl/libGLESv2_adreno.so
-vendor/lib/egl/libq3dtools_adreno.so
-vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/vulkan.adreno.so
-vendor/lib/libC2D2.so
-vendor/lib/libCB.so
-vendor/lib/libOpenCL.so
-vendor/lib/libadreno_utils.so
-vendor/lib/libc2d30_bltlib.so
-vendor/lib/libgsl.so
-vendor/lib/libllvm-glnext.so
-vendor/lib/libllvm-qcom.so
-vendor/lib64/egl/eglSubDriverAndroid.so
-vendor/lib64/egl/libEGL_adreno.so
-vendor/lib64/egl/libGLESv1_CM_adreno.so
-vendor/lib64/egl/libGLESv2_adreno.so
-vendor/lib64/egl/libq3dtools_adreno.so
-vendor/lib64/egl/libq3dtools_esx.so
-vendor/lib64/hw/vulkan.adreno.so
-vendor/lib64/libC2D2.so
-vendor/lib64/libCB.so
-vendor/lib64/libOpenCL.so
-vendor/lib64/libadreno_utils.so
-vendor/lib64/libc2d30_bltlib.so
-vendor/lib64/libgsl.so
-vendor/lib64/libllvm-glnext.so
-vendor/lib64/libllvm-qcom.so
+
+# Graphics - from Nothing Phone (1) A063_1.1.7
+vendor/gpu/kbc/sequence_manifest.bin|cc050a8058904871b3cfabec74521d42f0a61a1f
+vendor/gpu/kbc/unified_kbcs_32.bin|503228f87adc71131aa8134659b00dffe073e973
+vendor/gpu/kbc/unified_kbcs_64.bin|d63c26959dc02b2efc251953e99dc6e7c32e7f6e
+vendor/gpu/kbc/unified_ksqs.bin|8f77dc004796d58acb959e78f4994c5d6b90baef
+vendor/lib/egl/eglSubDriverAndroid.so|cac529f4cc2381fc8985caded98dc7236d0de43f
+vendor/lib/egl/libEGL_adreno.so|5cedb0d27065f43bff37d4b70cd98a27cc4e4aaf
+vendor/lib/egl/libGLESv1_CM_adreno.so|5ab7196d4c8ae861ff484cb6b1f4b5ac3c9738b4
+vendor/lib/egl/libGLESv2_adreno.so|caf1e0e551681a3047f5f8fbc17b185eee6b565f
+vendor/lib/egl/libq3dtools_adreno.so|994551fb9b829caf80bb7a8f84b4b89cb3104ed9
+vendor/lib/egl/libq3dtools_esx.so|bde58a35c12bb2311ac8b25b34a96cd3a776095b
+vendor/lib/hw/vulkan.adreno.so|ca43eefab537c1ee8ec4bb9dbae06331f2bd872b
+vendor/lib/libC2D2.so|1c89e545a5dabc94d27db32031594a792d91d6fd
+vendor/lib/libCB.so|7b518b962a77e28807f121de0383dda4f992912c
+vendor/lib/libOpenCL.so|f319002397d5089e4435fe19ad3916580fd6b731
+vendor/lib/libadreno_utils.so|ca0b9ea7030303c5b0ab9a261a7b47e35993c538
+vendor/lib/libc2d30_bltlib.so|5dce0e76e03b9cac4fc1f104524625a6f561fe91
+vendor/lib/libgsl.so|00d0d3c8b45c7e9db906d5793c6090a76f17afb4
+vendor/lib/libllvm-glnext.so|c0c1bffd0ca93523254072aee41989b1f37df4d1
+vendor/lib/libllvm-qcom.so|040954cc982da87731d005ae00a38f49801fa213
+vendor/lib64/egl/eglSubDriverAndroid.so|ac9099723b30614cf7c61c667204a392959694db
+vendor/lib64/egl/libEGL_adreno.so|5bedfed4eee4e02bc8b655a205c549ca9fd47591
+vendor/lib64/egl/libGLESv1_CM_adreno.so|b9e14710b9c2be024e1fdf77d60266423e484047
+vendor/lib64/egl/libGLESv2_adreno.so|7c0fd8a15d86a533f53471ee1644cc470b501bd9
+vendor/lib64/egl/libq3dtools_adreno.so|172810bc218ab55fe95f628ab1c0d37833eb0021
+vendor/lib64/egl/libq3dtools_esx.so|e8337555809cefa09735a2b28759a899f6307fa8
+vendor/lib64/hw/vulkan.adreno.so|3e981baca903027296ddccfc4b7fb73e4c190d90
+vendor/lib64/libC2D2.so|0b4aa67ef7e86df61a1bfd7dfd4680e0f0d7104c
+vendor/lib64/libCB.so|71bceb2a8815a368078d565192e14c7838bc8f1c
+vendor/lib64/libOpenCL.so|ac283fe3cd39fd8dffb2cb30c8b30840dc879d45
+vendor/lib64/libadreno_utils.so|080a43b5b82b4f6e2be49e817876fd92866c9073
+vendor/lib64/libc2d30_bltlib.so|da219e655056ca4a765ce3f6cf2b992d75088269
+vendor/lib64/libgsl.so|b71c12f5e38d148d48e58800ebd09f1d977f3d6b
+vendor/lib64/libllvm-glnext.so|ba9edbd59e96185ef612f47fa7b6f340e60c1f3c
+vendor/lib64/libllvm-qcom.so|cc4be65b93128742f5ee9bec9cbf4ad65a88fa1d
 
 # IMS
 system_ext/lib64/lib-imsvideocodec.so
