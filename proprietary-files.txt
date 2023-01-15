@@ -641,6 +641,9 @@ vendor/lib64/libsdsprpc.so
 
 # Charger (Xiaomi Turbo Charge)
 vendor/bin/batterysecret
+vendor/bin/hvdcp_opti
+vendor/bin/init.qti.chg_policy.sh
+vendor/etc/init/vendor.qti.hardware.charger_monitor@1.0-service.rc
 
 # CNE
 -vendor/app/CneApp/CneApp.apk
