@@ -58,6 +58,7 @@ class XiaomiMonaUdfpsHander : public UdfpsHandler {
     void onFingerUp() {
         LOG(INFO) << __func__;
         setFingerDown(false);
+        setFodStatus(FOD_STATUS_OFF);
     }
 
     void onAcquired(int32_t result, int32_t vendorCode) {
