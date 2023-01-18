@@ -11,3 +11,6 @@ PRODUCT_PACKAGES += \
     libsensorservicehidl \
     sensors.mona \
     vendor.qti.hardware.display.mapper@1.1.vendor
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
