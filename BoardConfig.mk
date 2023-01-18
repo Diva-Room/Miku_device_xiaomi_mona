@@ -52,9 +52,6 @@ BOARD_USES_METADATA_PARTITION := true
 # Partitions
 include $(BOARD_CONFIG_PATH)/partition_board_config.mk
 
-# Power
-TARGET_POWERHAL_MODE_EXT := $(DEVICE_PATH)/platform/power/power-mode.cpp
-
 # Properties
 include $(BOARD_CONFIG_PATH)/properties.mk
 
