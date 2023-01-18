@@ -590,6 +590,9 @@
          that can be set by the user. -->
      <integer name="config_screenBrightnessDoze">17</integer>
 
+    <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
+    <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_touch</string>
+
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
      <integer name="config_screenBrightnessSettingDefault">102</integer>
