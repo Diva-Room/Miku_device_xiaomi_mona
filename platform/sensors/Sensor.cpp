@@ -18,6 +18,7 @@
 
 #include <hardware/sensors.h>
 #include <utils/SystemClock.h>
+#include <log/log.h>
 
 #include <cmath>
 
