@@ -180,7 +180,6 @@ ro.bluetooth.a2dp_offload.supported=true
 persist.vendor.cne.feature=1
 
 # Camera
-camera.disable_zsl_mode=true
 persist.sys.camera.boost.ext.mem=1048576
 persist.sys.camera.boost.reclaim.pages=524288
 persist.sys.camera.boost.threshold=2097152

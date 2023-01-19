@@ -1,0 +1,58 @@
+# Audio
+/dev/socket/audio_hw_socket                      u:object_r:audio_socket:s0
+/dev/elliptic(.*)?                               u:object_r:sound_device:s0
+/dev/mius(.*)?                                   u:object_r:sound_device:s0
+
+# Battery Secret
+/vendor/bin/batterysecret		                 u:object_r:batterysecret_exec:s0
+
+# Camera
+/mnt/vendor/persist/camera(/.*)?                 u:object_r:camera_persist_file:s0
+
+# Fingerprint
+/dev/goodix_fp                                                                  u:object_r:vendor_fingerprint_device:s0
+/mnt/vendor/persist/goodix(/.*)?                                                u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/fpdump(/.*)?                                                       u:object_r:vendor_fingerprint_data_file:s0
+/data/vendor/goodix(/.*)?                                                       u:object_r:vendor_fingerprint_data_file:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi  u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/hw/mfp-daemon                                                       u:object_r:vendor_mfp-daemon_exec:s0
+/vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service                         u:object_r:hal_dtool_default_exec:s0
+/sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param              u:object_r:vendor_sysfs_graphics:s0
+
+# IR
+/dev/ir_spi                                      u:object_r:ir_spi_device:s0
+
+# Light
+/vendor/bin/hw/android.hardware.lights-service.qti.mona  u:object_r:hal_light_default_exec:s0
+
+# Media
+/vendor/bin/hw/dolbycodec2                           u:object_r:mediacodec_exec:s0
+
+# Mlipay
+/(vendor|system/vendor)/bin/mlipayd@1.1          u:object_r:hal_mlipay_default_exec:s0
+
+# NFC
+/vendor/bin/hw/android\.hardware\.nfc_snxxx@1\.2-service           u:object_r:hal_nfc_default_exec:s0
+
+# Sensors
+/sys/bus/iio/devices                                                                                                            u:object_r:vendor_sysfs_iio:s0
+/sys/devices/platform/us_prox.0/iio:device1(/.*)?                                                                               u:object_r:vendor_sysfs_iio:s0
+/sys/devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:vadc@3100/iio:device0(/.*)?        u:object_r:vendor_sysfs_iio:s0
+/vendor/bin/hw/android\.hardware\.sensors@2.1-service\.xiaomi_mona-multihal                                                     u:object_r:hal_sensors_default_exec:s0
+/vendor/bin/hw/vendor\.xiaomi\.hardware\.citsensorservice@1\.1-service                                                          u:object_r:vendor_hal_citsensorservice_xiaomi_default_exec:s0
+
+# Thermal
+/data/vendor/thermal(/.*)?                         u:object_r:thermal_data_file:s0
+/vendor/bin/mi_thermald                            u:object_r:mi_thermald_exec:s0
+
+# Touch
+/dev/xiaomi-touch                                          u:object_r:vendor_touchfeature_device:s0
+/vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service   u:object_r:vendor_touchfeature_device:s0
+
+# Vibrator
+/vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_mona                            u:object_r:hal_vibrator_default_exec:s0
+
+# Xiaomi MAC
+/vendor/bin/nv_mac                                 u:object_r:vendor_wcnss_service_exec:s0
+/data/vendor/mac_addr(/.*)?                        u:object_r:vendor_wifi_vendor_data_file:s0
+/data/vendor/wlan_logs(/.*)?                       u:object_r:vendor_wifi_vendor_data_file:s0

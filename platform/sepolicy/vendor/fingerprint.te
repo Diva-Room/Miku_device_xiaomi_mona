@@ -1,0 +1,76 @@
+type vendor_mfp-daemon, domain;
+type vendor_mfp-daemon_exec, exec_type, vendor_file_type, file_type;
+type vendor_fingerprint_data_file, data_file_type, file_type;
+type vendor_fingerprint_device, dev_type;
+type vendor_hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
+type hal_dtool_default, domain;
+type hal_dtool_default_exec, exec_type, vendor_file_type, file_type;
+
+vendor_internal_prop(vendor_fp_prop)
+vendor_internal_prop(vendor_fp_info_prop)
+
+hal_server_domain(vendor_mfp-daemon, hal_fingerprint)
+hal_server_domain(hal_dtool_default, hal_fingerprint)
+init_daemon_domain(vendor_mfp-daemon)
+init_daemon_domain(hal_dtool_default)
+
+allow vendor_mfp-daemon vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+allow vendor_mfp-daemon hidl_base_hwservice:hwservice_manager add;
+
+allow hal_dtool_default vendor_fingerprint_device:chr_file rw_file_perms;
+allow hal_dtool_default vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+
+#Allow access to goodix device
+allow hal_fingerprint_default vendor_fingerprint_device:chr_file rwx_file_perms;
+
+allow hal_fingerprint_default device:chr_file ioctl;
+allow hal_fingerprint_default self:netlink_socket { bind create write read };
+allow hal_fingerprint_default input_device:dir r_dir_perms;
+allow hal_fingerprint_default input_device:chr_file rw_file_perms;
+
+# Binder
+allow hal_fingerprint_default vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
+allow hal_fingerprint_default vendor_hal_perf_default:binder call;
+allow hal_fingerprint_default vendor_hal_perf_hwservice:hwservice_manager find;
+
+# Props
+set_prop(hal_fingerprint_default, vendor_fp_prop)
+set_prop(hal_fingerprint_default, vendor_fp_info_prop)
+
+# Sysfs
+allow hal_fingerprint_default sysfs_rtc:dir r_dir_perms;
+allow hal_fingerprint_default sysfs_rtc:file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_graphics:dir search;
+allow hal_fingerprint_default vendor_sysfs_graphics:file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_spss:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_spss:file rw_file_perms;
+allow hal_fingerprint_default vendor_sysfs_fingerprint:dir r_dir_perms;
+allow hal_fingerprint_default vendor_sysfs_fingerprint:file rw_file_perms;
+
+# Dev nodes
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default uhid_device:chr_file rw_file_perms;
+allow hal_fingerprint_default vendor_touchfeature_device:chr_file rw_file_perms;
+
+# Data
+allow hal_fingerprint_default fingerprint_vendor_data_file:dir create_dir_perms;
+allow hal_fingerprint_default fingerprint_vendor_data_file:file create_file_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;
+allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
+
+# Mfp
+set_prop(vendor_mfp-daemon, vendor_fp_prop)
+set_prop(vendor_mfp-daemon, vendor_fp_info_prop)
+
+allow vendor_mfp-daemon vendor_hal_perf_hwservice:hwservice_manager { find };
+
+allow vendor_mfp-daemon vendor_fingerprint_data_file:dir create_dir_perms;
+allow vendor_mfp-daemon vendor_fingerprint_data_file:file create_file_perms;
+allow vendor_mfp-daemon tee_device:chr_file rw_file_perms;
+allow vendor_mfp-daemon vendor_fingerprint_device:chr_file rwx_file_perms;
+allow vendor_mfp-daemon fingerprint_vendor_data_file:dir create_dir_perms;
+allow vendor_mfp-daemon fingerprint_vendor_data_file:file create_file_perms;
+allow vendor_mfp-daemon input_device:dir r_dir_perms;
+allow vendor_mfp-daemon input_device:chr_file rw_file_perms;
+allow vendor_mfp-daemon self:netlink_socket create_socket_perms_no_ioctl;
+allow vendor_mfp-daemon self:capability sys_nice;
