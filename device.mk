@@ -7,7 +7,6 @@
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
-    hardware/xiaomi \
     vendor/qcom/opensource/usb/etc
 
 # Get non-open-source specific aspects

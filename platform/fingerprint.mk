@@ -5,8 +5,5 @@
 #
 
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3.vendor \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi \
-    libudfpshandler \
-    vendor.goodix.hardware.biometrics.fingerprint@2.1.vendor \
+    android.hardware.biometrics.fingerprint@2.3-service.xiaomi_mona \
     vendor.xiaomi.hardware.fingerprintextension@1.0.vendor
