@@ -23,6 +23,7 @@
 #include <hidl/Status.h>
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
 #include "fingerprint.h"
+#include "xiaomi_touch.h"
 
 namespace android {
 namespace hardware {
@@ -71,6 +72,7 @@ public:
 private:
     static fingerprint_device_t* openHal();
     static void notify(const fingerprint_msg_t *msg); /* Static callback for legacy HAL implementation */
+    static void setFodStatus(int value);
     static Return<RequestStatus> ErrorFilter(int32_t error);
     static FingerprintError VendorErrorFilter(int32_t error, int32_t* vendorCode);
     static FingerprintAcquiredInfo VendorAcquiredFilter(int32_t error, int32_t* vendorCode);
