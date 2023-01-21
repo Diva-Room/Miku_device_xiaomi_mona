@@ -19,7 +19,7 @@
 #include <android/log.h>
 #include <hidl/HidlSupport.h>
 #include <hidl/HidlTransportSupport.h>
-#include <android/hardware/biometrics/fingerprint/2.1/types.h>
+#include <android/hardware/biometrics/fingerprint/2.2/types.h>
 #include <android/hardware/biometrics/fingerprint/2.3/IBiometricsFingerprint.h>
 #include "BiometricsFingerprint.h"
 
