@@ -28,7 +28,6 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.sh \
     init.qti.ufs.rc \
     init.recovery.qcom.rc \
-    init.safailnet.rc \
     init.target.rc \
     init.xiaomi.camera.rc \
     ueventd.qcom.rc
