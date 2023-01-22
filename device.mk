@@ -44,6 +44,9 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Developer GSI keys
 $(call inherit-product, $(SRC_TARGET_DIR)/product/developer_gsi_keys.mk)
 
+# Dex/ART optimization
+$(call inherit-product, $(LOCAL_PATH)/platform/dex_optimizations.mk)
+
 # Display 
 $(call inherit-product, $(LOCAL_PATH)/platform/display.mk)
 
