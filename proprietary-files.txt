@@ -1022,6 +1022,9 @@ vendor/lib64/libgsl.so|b71c12f5e38d148d48e58800ebd09f1d977f3d6b
 vendor/lib64/libllvm-glnext.so|ba9edbd59e96185ef612f47fa7b6f340e60c1f3c
 vendor/lib64/libllvm-qcom.so|cc4be65b93128742f5ee9bec9cbf4ad65a88fa1d
 
+# IFAA 
+-vendor/app/IFAAService/IFAAService.apk
+
 # IMS
 system_ext/lib64/lib-imsvideocodec.so
 system_ext/lib64/lib-imsvt.so
