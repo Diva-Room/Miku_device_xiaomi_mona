@@ -39,6 +39,3 @@ bluetooth.profile.sap.server.enabled?=true
 # Dexopt
 pm.dexopt.first-boot=quicken
 pm.dexopt.bg-dexopt=everything
-
-# Display
-debug.sf.enable_hwc_vds=1
