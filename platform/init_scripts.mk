@@ -14,7 +14,6 @@ PRODUCT_PACKAGES += \
     init.batterysecret.rc \
     init.class_main.sh \
     init.kernel.post_boot-lahaina.sh \
-    init.kernel.post_boot-shima.sh \
     init.kernel.post_boot-yupik.sh \
     init.kernel.post_boot.sh \
     init.mi_thermald.rc \
