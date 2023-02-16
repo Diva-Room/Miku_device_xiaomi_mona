@@ -141,28 +141,28 @@ vendor/firmware/aw882xx_rcv_reg_r.bin
 vendor/firmware/aw882xx_spk_reg_l.bin
 vendor/firmware/aw882xx_spk_reg_r.bin
 
-# Audio HAL
-vendor/lib/hw/audio.primary.lahaina.so
-vendor/lib/liba2dpoffload.so
-vendor/lib/libadm.so
-vendor/lib/libaudio_log_utils.so
-vendor/lib/libaudioconfigstore.so
-vendor/lib/libaudioparsers.so
-vendor/lib/libaudioroute_ext.so
-vendor/lib/libbatterylistener.so
-vendor/lib/libcomprcapture.so
-vendor/lib/libexthwplugin.so
-vendor/lib/libhdmiedid.so
-vendor/lib/libhdmipassthru.so
-vendor/lib/libhfp.so
-vendor/lib/libqtigef.so
-vendor/lib/libresampler.so
-vendor/lib/libsndmonitor.so
-vendor/lib/libspkrprot.so
-vendor/lib/libssrec.so
-vendor/lib/libvideoNS.so
-vendor/lib64/libcomprcapture.so
-vendor/lib64/libresampler.so
+# Audio HAL - from ZIJIN_V14.0.3.0.TLPCNXM
+vendor/lib/hw/audio.primary.lahaina.so|2c851230f7114c48d6df7f237f0f32c0c7a67010
+vendor/lib/liba2dpoffload.so|7f585cbfae36207f0c1d052a8540cb0fd48a0fad
+vendor/lib/libadm.so|ceb6b3d0ba0d41bb5d923fc4ff4699fdf9b0003f
+vendor/lib/libaudio_log_utils.so|f2fb5deb9cc93993983ef84d46bc8ccf0a275c45
+vendor/lib/libaudioconfigstore.so|1b53f032ae43dd335ada7755642cb62864890165
+vendor/lib/libaudioparsers.so|7569d3f969fe586145970f30c90d395074f577e4
+vendor/lib/libaudioroute_ext.so|429fcd85cde180d47dafd8c516879bd81e7ff067
+vendor/lib/libbatterylistener.so|0e74912d081b14bc096ded90dd5f69503f1900e1
+vendor/lib/libcomprcapture.so|f75480e0fa416ced98ef93fd66b3bd32395b8f3e
+vendor/lib/libexthwplugin.so|924ebaed39d7577fc1f28e413df2c8b87b6b00eb
+vendor/lib/libhdmiedid.so|53174e4ed428494fbc6d1756322dc4d336686dbe
+vendor/lib/libhdmipassthru.so|15cfe1d0b08e8a54b36a5c439f418da26e43f23f
+vendor/lib/libhfp.so|57f996fd41d373d96ca4f9d0a7e3a151c7219785
+vendor/lib/libqtigef.so|ee722811e15dcd37c1e6364fb352a4092500ef1a
+vendor/lib/libresampler.so|8edd3e46d46ad53469487f172219aec3a5a840b5
+vendor/lib/libsndmonitor.so|27afe5e7b748a8cf3f7aef7507c2978285ad79bb
+vendor/lib/libspkrprot.so|284ad54c7c812f631c8ea5ee33747393c7df8113
+vendor/lib/libssrec.so|7b7df93a2853c7ca02e99be95a5d28379c8aeef7
+vendor/lib/libvideoNS.so|d4ecaa05d043e4d125ec3b1d06901d8a48091e7c
+vendor/lib64/libcomprcapture.so|f3e99ca846a2e9ae54cffb639cc2a33951794f33
+vendor/lib64/libresampler.so|b38622335b7a883e06f4f48e0f8df33c179d034f
 
 # Audio FX modules
 system_ext/etc/permissions/audiosphere.xml
