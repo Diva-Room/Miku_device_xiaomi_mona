@@ -447,7 +447,7 @@ service vendor.ssr_setup /system/vendor/bin/ssr_setup
     oneshot
     disabled
 
-service vendor.ss_ramdump /system/bin/subsystem_ramdump_system 2
+service vendor.ss_ramdump /vendor/bin/subsystem_ramdump
     class main
     #user system
     group system everybody
@@ -487,7 +487,7 @@ on property:persist.vendor.ssr.restart_level=*
 on property:persist.vendor.ssr.enable_ramdumps=1
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 1
     mkdir /data/vendor/ramdump_ssr 770 system system
-    #start vendor.ss_ramdump
+    start vendor.ss_ramdump
 
 on property:persist.vendor.ssr.enable_ramdumps=0
     write /sys/module/subsystem_restart/parameters/enable_ramdumps 0
@@ -809,7 +809,7 @@ service vendor.ssr_diag /system/vendor/bin/ssr_diag
     group system
     disabled
 
-service diag_mdlog_start /system/vendor/bin/diag_mdlog -q 2 -j 1 -u -c -i -n 40
+service diag_mdlog_start /system/vendor/bin/diag_mdlog -q 2 -j 1 -u -c -i -n 20 -s 300
     class late_start
     user shell
     group system oem_2901 oem_2902 sdcard_rw sdcard_r media_rw vendor_adpl_odl

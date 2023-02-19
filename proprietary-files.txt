@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from MONA_V13.0.6.0.SKVCNXM
+# All unpinned blobs below are extracted from MONA_V14.0.1.0.TKVCNXM
 # ACDB 
 vendor/etc/acdbdata/CDP/CDP_Bluetooth_cal.acdb
 vendor/etc/acdbdata/CDP/CDP_General_cal.acdb
@@ -417,9 +417,7 @@ vendor/lib64/camera/components/com.qtistatic.stats.aec.so
 vendor/lib64/camera/components/com.qtistatic.stats.af.so
 vendor/lib64/camera/components/com.qtistatic.stats.awb.so
 vendor/lib64/camera/components/com.qtistatic.stats.pdlib.so
-vendor/lib64/camera/components/com.vidhance.node.eis.so
-vendor/lib64/camera/components/com.vidhance.node.ica.so
-vendor/lib64/camera/components/com.vidhance.stats.aec_dmbr.so
+vendor/lib64/camera/components/com.xiaomi.node.ica.so
 vendor/lib64/camera/components/com.xiaomi.node.mibokeh.so
 vendor/lib64/camera/components/com.xiaomi.node.mifilter.so
 vendor/lib64/camera/components/com.xiaomi.node.misegment.so
@@ -528,6 +526,7 @@ vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
 vendor/lib64/libcapture_beautyeffect.so
+vendor/lib64/libceres.so
 vendor/lib64/libchilog.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcom.xiaomi.debug.so
@@ -1583,6 +1582,7 @@ vendor/etc/sensors/config/sns_oem13.json
 vendor/etc/sensors/config/sns_pedometer.json
 vendor/etc/sensors/config/sns_rmd.json
 vendor/etc/sensors/config/sns_rotv.json
+vendor/etc/sensors/config/sns_screen_down.json
 vendor/etc/sensors/config/sns_smd.json
 vendor/etc/sensors/config/sns_tilt.json
 vendor/etc/sensors/config/sns_tilt_sw_disabled.json

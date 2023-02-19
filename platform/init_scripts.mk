@@ -26,7 +26,6 @@ PRODUCT_PACKAGES += \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
     init.qti.media.sh \
-    init.qti.ufs.rc \
     init.recovery.qcom.rc \
     init.target.rc \
     init.xiaomi.camera.rc \

@@ -58,7 +58,7 @@ include $(BOARD_CONFIG_PATH)/properties.mk
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2022-08-01
+VENDOR_SECURITY_PATCH := 2023-01-01
 
 # SELinux
 include $(DEVICE_PATH)/platform/sepolicy/sepolicy.mk
