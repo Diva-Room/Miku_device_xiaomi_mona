@@ -16,7 +16,6 @@
 /data/vendor/goodix(/.*)?                                                       u:object_r:vendor_fingerprint_data_file:s0
 /vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_mona  u:object_r:hal_fingerprint_default_exec:s0
 /vendor/bin/hw/mfp-daemon                                                       u:object_r:vendor_mfp-daemon_exec:s0
-/vendor/bin/hw/vendor.xiaomi.hardware.dtool@1.0-service                         u:object_r:hal_dtool_default_exec:s0
 /sys/devices/virtual/mi_display/disp_feature/disp-DSI-0/disp_param              u:object_r:vendor_sysfs_graphics:s0
 
 # IR
