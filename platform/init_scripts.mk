@@ -23,6 +23,8 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
+    init.qti.display_boot.rc \
+    init.qti.display_boot.sh \
     init.qti.kernel.rc \
     init.qti.kernel.sh \
     init.qti.media.sh \
