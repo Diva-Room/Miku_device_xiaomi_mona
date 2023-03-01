@@ -17,6 +17,11 @@ ro.lmk.use_minfree_levels=true
 # Media 
 media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
+# Performance mode
+ro.perfmode=true
+ro.perf.cluster1=4
+ro.perf.cluster2=7
+
 # RIL
 persist.vendor.radio.atfwd.start=true
 persist.vendor.radio.report_codec=1
