@@ -17,6 +17,7 @@
 <resources>
 
     <!-- Dirac settings -->
+    <string name="device_settings_app_name">Dirac</string>
     <string name="dirac_enable">Enable dirac</string>
     <string name="dirac_title">Dirac sound enhancer</string>
     <string name="dirac_summary">Optimize sound quality with Dirac, Hi-Fi</string>
