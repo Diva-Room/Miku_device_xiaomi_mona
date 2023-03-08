@@ -19,11 +19,22 @@ package com.mona.parts
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.os.IBinder
 import android.util.Log
+import android.view.Display.HdrCapabilities
+import android.view.SurfaceControl
 
 class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent")
+
+        val displayToken: IBinder = SurfaceControl.getInternalDisplayToken()
+        SurfaceControl.overrideHdrTypes(
+            displayToken, intArrayOf(
+                HdrCapabilities.HDR_TYPE_DOLBY_VISION, HdrCapabilities.HDR_TYPE_HDR10,
+                HdrCapabilities.HDR_TYPE_HLG, HdrCapabilities.HDR_TYPE_HDR10_PLUS
+            )
+        )
     }
 
     companion object {
