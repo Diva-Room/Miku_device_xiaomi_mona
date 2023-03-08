@@ -86,6 +86,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/keymaster.mk)
 # Media
 $(call inherit-product, $(LOCAL_PATH)/platform/media.mk)
 
+# Mona Parts
+PRODUCT_PACKAGES += MonaParts
+
 # Networks
 $(call inherit-product, $(LOCAL_PATH)/platform/networks.mk)
 
