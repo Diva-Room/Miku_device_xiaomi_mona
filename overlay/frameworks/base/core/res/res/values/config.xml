@@ -585,7 +585,7 @@
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
          May be less than the minimum allowed brightness setting
          that can be set by the user. -->
-     <integer name="config_screenBrightnessDoze">10</integer>
+     <integer name="config_screenBrightnessDoze">4</integer>
 
     <!-- Type of the double tap sensor. Empty if double tap is not supported. -->
     <string name="config_dozeDoubleTapSensorType" translatable="false">org.lineageos.sensor.double_touch</string>
