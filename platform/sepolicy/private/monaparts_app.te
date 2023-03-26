@@ -1,0 +1,44 @@
+type monaparts_app, domain;
+typeattribute monaparts_app mlstrustedsubject;
+
+app_domain(monaparts_app)
+
+allow monaparts_app {
+  activity_service
+  activity_task_service
+  audio_service
+  audioserver_service
+  autofill_service
+  cameraserver_service
+  content_capture_service
+  game_service
+  gpu_service
+  netstats_service
+  mediaextractor_service
+  mediametrics_service
+  mediaserver_service
+  sensorservice_service
+  surfaceflinger_service
+  media_session_service
+  storagestats_service
+  tethering_service
+  voiceinteraction_service
+}:service_manager find;
+
+allow monaparts_app sysfs_dc:dir search;
+allow monaparts_app sysfs_dc:file rw_file_perms;
+
+allow monaparts_app system_app_data_file:dir create_dir_perms;
+allow monaparts_app system_app_data_file:file create_file_perms;
+
+allow monaparts_app {
+  system_data_file
+  user_profile_root_file
+}:dir search;
+
+allow monaparts_app {
+  cgroup
+}:{ file lnk_file } rw_file_perms;
+
+set_prop(monaparts_app, system_prop)
+get_prop(monaparts_app, system_prop)

@@ -19,14 +19,25 @@ package com.mona.parts
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.os.IBinder
 import android.util.Log
 import android.view.Display.HdrCapabilities
 import android.view.SurfaceControl
+import androidx.preference.PreferenceManager
+
+import com.android.internal.util.miku.FileUtils;
+import com.mona.parts.display.DcUtils
 
 class BootCompletedReceiver : BroadcastReceiver() {
     override fun onReceive(context: Context, intent: Intent) {
         if (DEBUG) Log.d(TAG, "Received boot completed intent")
+
+        val sharedPreference = PreferenceManager.getDefaultSharedPreferences(context)
+        val dcDimmingEnabled = sharedPreference.getBoolean(DcUtils.DC_DIMMING_KEY, false)
+        if (!DcUtils.setDcStatus(if (dcDimmingEnabled) DcUtils.DC_ON else DcUtils.DC_OFF)) {
+                Log.e(TAG, "Failed to set DC node on boot!")
+        }
 
         val displayToken: IBinder = SurfaceControl.getInternalDisplayToken()
         SurfaceControl.overrideHdrTypes(

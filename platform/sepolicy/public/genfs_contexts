@@ -1,0 +1,2 @@
+# DC Dimming
+genfscon sysfs /devices/platform/soc/soc:qcom,dsi-display-primary/dimlayer_exposure u:object_r:sysfs_dc:s0
