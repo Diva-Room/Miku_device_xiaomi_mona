@@ -8,7 +8,6 @@ import androidx.preference.Preference.OnPreferenceChangeListener
 import androidx.preference.PreferenceFragment
 import androidx.preference.SwitchPreference
 
-import com.android.internal.util.miku.FileUtils
 import com.mona.parts.R
 
 class DcDimmingSettingsFragment : PreferenceFragment() {

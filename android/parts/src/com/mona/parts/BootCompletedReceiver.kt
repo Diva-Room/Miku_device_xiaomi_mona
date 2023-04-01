@@ -26,7 +26,6 @@ import android.view.Display.HdrCapabilities
 import android.view.SurfaceControl
 import androidx.preference.PreferenceManager
 
-import com.android.internal.util.miku.FileUtils;
 import com.mona.parts.display.DcUtils
 
 class BootCompletedReceiver : BroadcastReceiver() {
