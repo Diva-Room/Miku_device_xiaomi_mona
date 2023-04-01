@@ -25,7 +25,6 @@ allow monaparts_app {
   voiceinteraction_service
 }:service_manager find;
 
-allow monaparts_app sysfs_dc:dir search;
 allow monaparts_app sysfs_dc:file rw_file_perms;
 
 allow monaparts_app system_app_data_file:dir create_dir_perms;
