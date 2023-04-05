@@ -55,7 +55,7 @@ qca_cld3_wlan.ko
 qm1d1b0004.ko
 qm1d1c0042.ko
 qt1010.ko
-qti_battery_charger_main.ko
+qti_battery_charger_main_odin.ko
 r820t.ko
 radio-i2c-rtc6226-qca.ko
 rdbg.ko
