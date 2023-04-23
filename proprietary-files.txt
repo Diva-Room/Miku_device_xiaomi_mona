@@ -698,20 +698,15 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 vendor/lib64/hw/consumerir.lahaina.so
 
 # Display - from Nothing Phone (1) A063_1.1.7
-vendor/bin/qdcmss|2dd2d71247c85a1bb6b3168d53cd844cb387f75c
 vendor/etc/display/DPU660.xml|b26dd73e361546d89bf3d7082a471703dc6ac2cb
 vendor/etc/display/DPU670.xml|e5131a60ceff29ca5eb561eec7eddadef1d0486f
 vendor/etc/display/DPU720.xml|4e54e8712d65773eb87867bf64a4cb98ea9bb8c3
 vendor/etc/display/DPU7__.xml|c056f3cb9fa123ca3de5b2a9775c184dddf25b9d
-vendor/etc/display/advanced_sf_offsets.xml|e145a0c0f975f6d924fbe7f18f531ae044ec3bef
-vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
 vendor/etc/snapdragon_color_libs_config.xml|20be96679760b14cd63577a17f4a040e543254dd
 vendor/lib64/libdisplayqos.so|aa222f4c1a2d2fb60944c44f8a82621d6bc75184
 vendor/lib64/libdisplayskuutils.so|5afcd261783ca109c9d63e8d08c879b76fb4efd6
 vendor/lib64/libdpp_manager.so|5d6518f8f91a42eabad171759b1edce0720e14cc
 vendor/lib64/libdpps.so|a5ef371c8df8af548db93adbd8757d2bf3c73da8
-vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
-vendor/lib64/libqdcm-mode-parser.so|207143ab4dda0886bde2a0333d7a1bcd7af6f8e1
 vendor/lib64/libqrtrclient.so|51c55fea28fa475ae9b2c64592f32802e6ba6c25
 vendor/lib64/libqseed3.so|d62c37baf259250cadfcff8734e82054ed87bb96
 vendor/lib64/librcmask.so|8feb479fe590b6aec282ce3342574d9113f80516
@@ -720,9 +715,10 @@ vendor/lib64/libsdm-colormgr-algo.so|5416a3b9b0735099c9b86f451f41386711787ea4
 vendor/lib64/libsdm-diag.so|720089c4bc66897e1bfd84e7983b3c34f2c4eec8
 vendor/lib64/libsdm-disp-vndapis.so|dc3ff8c971bbcb0d1b9e5079324d1d1d05a1fd39
 vendor/lib64/libsdmextension.so|85d04d20a022d79134eeba08bb4ec139d59e3479
-vendor/lib64/libsnapdragoncolor-manager.so|e7f55a1ba843bb570afa6bbf16bb61dc01ec74ea
-vendor/lib64/libsnapdragoncolor-qdcm.so|673c41753603bacb197674df567723dfd928384e
 vendor/lib64/libtinyxml2_1.so|11ceb3f1e7650c41621d47e5ec5567c8f466086e
+
+# Display (HDR) - from Nothing Phone (1) A063_1.1.7
+vendor/lib64/libhdr_tm.so|7954c5cd5c0b23fe8d0609361c22d24c59f1448b
 
 # Display (Stock)
 vendor/etc/mdss_dsi_k9b_42_02_0a_dsc_cmd_mi.xml
@@ -731,8 +727,13 @@ vendor/etc/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.xml
 # Display postprocessing - from Nothing Phone (1) A063_1.1.7
 vendor/bin/hw/vendor.display.color@1.0-service|347fda7fe824e405829e1772739e999937421a58
 vendor/bin/ppd|4fcb818e39c813570fdbfaa9726274986e190e04
+vendor/bin/qdcmss|2dd2d71247c85a1bb6b3168d53cd844cb387f75c
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
 vendor/lib64/libdisp-aba.so|5c8ad123fb335a74bd573587924f93ac812594fd
+vendor/lib64/libqdcm-mode-parser.so|207143ab4dda0886bde2a0333d7a1bcd7af6f8e1
+vendor/lib64/libsnapdragoncolor-manager.so|e7f55a1ba843bb570afa6bbf16bb61dc01ec74ea
+vendor/lib64/libsnapdragoncolor-qdcm.so|673c41753603bacb197674df567723dfd928384e
 vendor/lib64/vendor.display.color@1.0.so|76e84677fefbe97a0c9d33646fca2834e77a3b6f
 vendor/lib64/vendor.display.color@1.1.so|3aa79bbf7592472d87c29f91a106141eff8a9a74
 vendor/lib64/vendor.display.color@1.2.so|8b5ed3c2b39aa38f6194f2ed3872166f88b8ad98
