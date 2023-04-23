@@ -12,6 +12,9 @@ PRODUCT_SOONG_NAMESPACES += \
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/xiaomi/mona/mona-vendor.mk)
 
+# Enable updating of APEXes
+$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 $(call inherit-product, $(LOCAL_PATH)/platform/vab.mk)
