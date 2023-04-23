@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from MONA_V14.0.1.0.TKVCNXM
+# All unpinned blobs below are extracted from MONA_V14.0.2.0.TKVCNXM
 # ACDB 
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb
