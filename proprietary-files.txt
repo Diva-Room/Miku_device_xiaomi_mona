@@ -1495,15 +1495,6 @@ vendor/lib64/sensors.touch.detect.so
 # Sensors configs
 vendor/etc/sensors/config/ak991x_dri_0.json
 vendor/etc/sensors/config/lsm6dso_0.json
-vendor/etc/sensors/config/sm7350_ak991x_0.json
-vendor/etc/sensors/config/sm7350_default_sensors.json
-vendor/etc/sensors/config/sm7350_dynamic_sensors.json
-vendor/etc/sensors/config/sm7350_icm4x6xa_0.json
-vendor/etc/sensors/config/sm7350_irq.json
-vendor/etc/sensors/config/sm7350_lsm6dso_0.json
-vendor/etc/sensors/config/sm7350_power_0.json
-vendor/etc/sensors/config/sm7350_tcs3408.json
-vendor/etc/sensors/config/sm7350_tmd3719.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_amd_sw_disabled.json
 vendor/etc/sensors/config/sns_amd_sw_enabled.json
