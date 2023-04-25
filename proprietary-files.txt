@@ -955,6 +955,7 @@ system_ext/lib64/libimscamera_jni.so|a21333fa8f338acaa4996f74a0e29145f77d5299
 system_ext/lib64/libimsmedia_jni.so|d1b4c03352a9b34f4d26a4fe3a8595f295c7cef8
 system_ext/lib64/vendor.qti.diaghal@1.0.so|cb9428b76c47d283d614833ed9207a894ab533ce
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so|ace5e02b6cd79b43a07d84e2d18d6818821a3c48
+system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|e64aa8a21a8db69d2e2ea14929bb20ced99c119d
 
 # IMS
 vendor/bin/ims_rtp_daemon
