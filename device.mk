@@ -101,7 +101,7 @@ $(call inherit-product, $(LOCAL_PATH)/platform/nfc.mk)
 # Overlay
 $(call inherit-product, $(LOCAL_PATH)/platform/rro_overlay.mk)
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/android/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
