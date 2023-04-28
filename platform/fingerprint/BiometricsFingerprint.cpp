@@ -211,14 +211,7 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 
 Return<RequestStatus> BiometricsFingerprint::cancel() {
     LOG(INFO) << __func__;
-    device->extCmd(device, COMMAND_NIT, PARAM_NIT_NONE);
-
-    int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 0};
-    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
-
-    set(DISP_PARAM_PATH,
-        std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " +
-                (DISP_PARAM_LOCAL_HBM_OFF));
+    setHbmStatus(false);
     setFodStatus(FOD_STATUS_OFF);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
@@ -335,14 +328,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 ALOGD("onAcquired(%d)", result);
                 LOG(INFO) << __func__ << " result: " << static_cast<int32_t>(result) << " vendorCode: " << vendorCode;
                 if (static_cast<int32_t>(result) == FINGERPRINT_ACQUIRED_GOOD) {
-                    device->extCmd(device, COMMAND_NIT, PARAM_NIT_NONE);
-
-                    int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 0};
-                    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
-
-                    set(DISP_PARAM_PATH,
-                        std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " +
-                                (DISP_PARAM_LOCAL_HBM_OFF));
+                    setHbmStatus(false);
                     setFodStatus(FOD_STATUS_OFF);
                 } else if (vendorCode == 21 || vendorCode == 23) {
                     /*
@@ -425,6 +411,17 @@ void BiometricsFingerprint::setFodStatus(int value) {
     ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
 }
 
+void BiometricsFingerprint::setHbmStatus(bool value) {
+    device->extCmd(device, COMMAND_NIT, value ? PARAM_NIT_FOD : PARAM_NIT_NONE);
+
+    int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, value ? FOD_STATUS_ON : FOD_STATUS_OFF};
+    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
+
+    set(DISP_PARAM_PATH,
+        std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " +
+                (value ? DISP_PARAM_LOCAL_HBM_ON : DISP_PARAM_LOCAL_HBM_OFF));
+}
+
 Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
     return true;
 }
@@ -432,27 +429,13 @@ Return<bool> BiometricsFingerprint::isUdfps(uint32_t /* sensorId */) {
 Return<void> BiometricsFingerprint::onFingerDown(uint32_t /* x */, uint32_t /* y */,
                                                  float /* minor */, float /* major */) {
     LOG(INFO) << __func__;
-    device->extCmd(device, COMMAND_NIT, PARAM_NIT_FOD);
-
-    int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 1};
-    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
-
-    set(DISP_PARAM_PATH,
-        std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " +
-                (DISP_PARAM_LOCAL_HBM_ON));
+    setHbmStatus(true);
     return Void();
 }
 
 Return<void> BiometricsFingerprint::onFingerUp() {
     LOG(INFO) << __func__;
-    device->extCmd(device, COMMAND_NIT, PARAM_NIT_NONE);
-
-    int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, 0};
-    ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
-
-    set(DISP_PARAM_PATH,
-        std::string(DISP_PARAM_LOCAL_HBM_MODE) + " " +
-                (DISP_PARAM_LOCAL_HBM_OFF));
+    setHbmStatus(false);
     return Void();
 }
 
