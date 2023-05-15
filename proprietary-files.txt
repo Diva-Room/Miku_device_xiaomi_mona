@@ -1295,13 +1295,13 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
-# Power-off alarm - from MONA_V14.0.2.0.TKVCNXM
--product/app/PowerOffAlarm/PowerOffAlarm.apk|8d5f01ef9cc8c67ccb68b6c620d3019f26cf70f7
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|0577580411e1da95c24f1e9ddbc43461b18122a1
-vendor/bin/power_off_alarm|87c955a9fb7f56222ecc52f34cc1e72ae7ef72b7
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6ffb466e23a7fc3b05
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|82d2cf559e80bbb0980e284aa8efb795605a95cd
-vendor/lib64/vendor.qti.hardware.alarm@1.0.so|ec696fea7197fe45d84d0b965d5b17a556ef2614
+# Power-off alarm
+-product/app/PowerOffAlarm/PowerOffAlarm.apk
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
+vendor/bin/power_off_alarm
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so
 
 # QCV
 vendor/bin/init.qti.qcv.sh
