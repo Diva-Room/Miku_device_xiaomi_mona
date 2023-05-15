@@ -1721,7 +1721,7 @@ vendor/firmware/aw8622x_haptic.bin|71e589fd9d9150f288bec81a800aa5014619c183
 vendor/firmware/aw8622x_osc_rtp_24K_5s.bin|9f32c9bf0776a566d3254129a028dae9bed76b81
 vendor/firmware/aw8622x_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
 
-# VNDK
+# VNDK - from MONA_V14.0.2.0.TKVCNXM
 vendor/etc/public.libraries.txt|ad84f9dba1272556ad18611de930cda8109e9e9b
 
 # VPP
