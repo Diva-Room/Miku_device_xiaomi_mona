@@ -1054,12 +1054,32 @@ vendor/lib64/libcapiv2svacnn.so|75e7191bb291f18f909e19092052a66f942b3fba
 vendor/lib64/libcapiv2svarnn.so|c2030da244d21e6fa52102699bfc48acdaf2a41a
 vendor/lib64/libcapiv2vop.so|9775a816f5c05b1a09e6bdbcc57fde765ee63e7c
 
-# Media - from MONA_V14.0.2.0.TKVCNXM
+# Media
+system_ext/lib/libmmosal.so
+system_ext/lib/libmmparser_lite.so
+system_ext/lib64/libmmosal.so
+system_ext/lib64/libmmparser_lite.so
+vendor/lib/libmmosal.so
+vendor/lib/libqc2vppfilter.so
+vendor/lib/libqcodec2_base.so
+vendor/lib/libqcodec2_basecodec.so
+vendor/lib/libqcodec2_core.so
+vendor/lib/libqcodec2_hooks.so
+vendor/lib/libqcodec2_platform.so
+vendor/lib/libqcodec2_utils.so
+vendor/lib/libqcodec2_v4l2codec.so
+vendor/lib64/libmmosal.so
+vendor/lib64/libqc2vppfilter.so
+vendor/lib64/libqcodec2_base.so
+vendor/lib64/libqcodec2_basecodec.so
+vendor/lib64/libqcodec2_core.so
+vendor/lib64/libqcodec2_hooks.so
+vendor/lib64/libqcodec2_platform.so
+vendor/lib64/libqcodec2_utils.so
+vendor/lib64/libqcodec2_v4l2codec.so
+
+# Media Profiles - from MONA_V14.0.2.0.TKVCNXM
 -vendor/etc/vintf/manifest/c2_manifest_vendor.xml|735eb3238894207a95d3f5133422b9f76927a73f|dfaad7360e85bf2d1a8293bb878a4f0edc70b1db
-system_ext/lib/libmmosal.so|9c626fe0703e3db70bc54b14872a7aff97b769ec
-system_ext/lib/libmmparser_lite.so|7171defd018c507a2e34784569eb9920a22f15cf
-system_ext/lib64/libmmosal.so|d46f10b470ecd829c6f2a424566f1cbbc6ebe234
-system_ext/lib64/libmmparser_lite.so|1959f64d628f9c7dac476f4e32a4f9cae1443f76
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|d2f330fa2f4b2548e36155cddba193b6695f00a7
 vendor/etc/init/init.qti.media.rc|ab36de06c01003fa6f665bc38709417c26d99d62
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc|11209316ba8aae64b689217bc13b0804f6620678
@@ -1087,24 +1107,6 @@ vendor/etc/media_yupik_v1/video_system_specs.json|87bc9257af53d43addf1190d39a548
 vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|3dd480257e5c2ad2f776f49783a40904e21ef393
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy|a134d3d5d74294ca8164056b42389b1c7dbb2b65
 vendor/etc/video_system_specs.json|fa29471cada89e61aba80dc4dacbd7c9d2f86d5e
-vendor/lib/libmmosal.so|02b7e16e8e6c24c7266c1723bfe98518925793a5
-vendor/lib/libqc2vppfilter.so|eeca0cf412ee6b7c00d910949b01c70a0f239395
-vendor/lib/libqcodec2_base.so|06c21bad615a76d4cddc67b9e650ecf6571bafc5
-vendor/lib/libqcodec2_basecodec.so|bc907ad9e014a8673e1bef70bf99f3d0edaa518b
-vendor/lib/libqcodec2_core.so|c836ce9149bf2c69c4393728a718938a7f0fe631
-vendor/lib/libqcodec2_hooks.so|6e6891f50184734aee870baa9b9d27d71220c83e
-vendor/lib/libqcodec2_platform.so|19add2e806f20c88576650fdf8eca448cb1ac3ea
-vendor/lib/libqcodec2_utils.so|0444d5bffbe68b648e3600fa8e467ecf7c5dbfb2
-vendor/lib/libqcodec2_v4l2codec.so|5df4d32b9c4936a2206bafb08c6e6e5b6eb63bad
-vendor/lib64/libmmosal.so|d8751929e0c4ef8ae68d3958df04f34c43cd1be0
-vendor/lib64/libqc2vppfilter.so|4a8419071f3a8c5f6ff3d9ea516c15923f57519d
-vendor/lib64/libqcodec2_base.so|acb2fd2f4d4d83699871e9b652dbbde97f639fdc
-vendor/lib64/libqcodec2_basecodec.so|10179d9f2b5bca8d86b3d934160fbffefd3138de
-vendor/lib64/libqcodec2_core.so|6457f97f83fba24665bd0fc806f826e2e4470fcc
-vendor/lib64/libqcodec2_hooks.so|275a1cdbc54e9a1c7357011e3f29eaa646ffe155
-vendor/lib64/libqcodec2_platform.so|c82c22f54bbdbf4da064634c6009133adee130d3
-vendor/lib64/libqcodec2_utils.so|3a9572f140f5ca30321bd26cba6326db72d3c6d7
-vendor/lib64/libqcodec2_v4l2codec.so|5ce6aa4024345720f89a71716649d58e650b12e4
 
 # Media Dolby Vision Codec - from MONA_V14.0.2.0.TKVCNXM
 vendor/bin/hw/dolbycodec2|186f07732444177f5d719c31d99a7420a54cb025|b06ec5e60e9f11bb3424df774ff825e6b9f93b99
