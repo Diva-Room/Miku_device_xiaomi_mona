@@ -886,13 +886,6 @@ vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
 # Graphics firmware - from MONA_V14.0.2.0.TKVCNXM
-vendor/firmware/a615_zap.b00|55c1a14a5699d05f796a982448711159f8208951
-vendor/firmware/a615_zap.b01|d9eaab12b99a4b8e37c63e1e38f47fa81a56d97c
-vendor/firmware/a615_zap.b02|4ae54047f9629f2470a5d58f3940c5eb51298b96
-vendor/firmware/a615_zap.elf|d0761904ec6699fb4cb0b95e7bfe99f43a4320ac
-vendor/firmware/a615_zap.mdt|718c6bba9fbf4686c499360a6f375c2e2c11a9d8
-vendor/firmware/a619_gmu.bin|0c211ef8a3246d649a4ae52a926d128b61e3c264
-vendor/firmware/a630_sqe.fw|3e38a62bdb02bd3db36ff0350bf3fd840324b3ad
 vendor/firmware/a660_gmu.bin|607402e7c1c49f486258e5e02780e74fcf7311e1
 vendor/firmware/a660_sqe.fw|8e6becfbcff6ff6e64b5edb6f135cc6f656d4ee1
 vendor/firmware/a660_zap.b00|8db2ba7a6da65a4d35d9c5da0a49493efd27913a
