@@ -1009,13 +1009,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
 # IPA - from MONA_V14.0.2.0.TKVCNXM
 vendor/etc/init/ipa_fws.rc|f1826b81077f51470c97781823f109f12361ac8b
-vendor/firmware/ipa_fws.b00|6f50db0a1cc20236ac1ba78d105ff457a8316152
-vendor/firmware/ipa_fws.b01|ffbeaf5bd014b321c987e6a665fc2ec520a02e1e
-vendor/firmware/ipa_fws.b02|de771411df81d0c4183a698746351ee0943f5901
-vendor/firmware/ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
-vendor/firmware/ipa_fws.b04|7aa0ec649f20af523f21c6e19014987f86f18dff
-vendor/firmware/ipa_fws.elf|61652a38065d911a296720e3fc84faf856160e18
-vendor/firmware/ipa_fws.mdt|962438a16c682ed6a541c9667c00e956e8112ee3
 vendor/firmware/yupik_ipa_fws.b00|f16e03fc90554add646c29ad2a9eb1cfb34aea01
 vendor/firmware/yupik_ipa_fws.b01|1667bf884ce7e0b63108b62c00d343932ce7fd47
 vendor/firmware/yupik_ipa_fws.b02|c0f5259e45f67f322459e7afde30cba608b9ea5f
