@@ -6,7 +6,8 @@
 
 # Perf
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor
+    vendor.qti.hardware.perf@2.2.vendor \
+    vendor.qti.hardware.perf@2.3
 
 # Power
 PRODUCT_PACKAGES += \

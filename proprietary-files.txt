@@ -1260,10 +1260,6 @@ system_ext/lib/libsmomoconfig.qti.so
 system_ext/lib/vendor.qti.hardware.limits@1.0.so
 system_ext/lib/vendor.qti.hardware.limits@1.1.so
 system_ext/lib/vendor.qti.hardware.iop@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.0.so
-system_ext/lib/vendor.qti.hardware.perf@2.1.so
-system_ext/lib/vendor.qti.hardware.perf@2.2.so
-system_ext/lib/vendor.qti.hardware.perf@2.3.so
 system_ext/lib/vendor.qti.qspmhal@1.0.so
 system_ext/lib64/libbeluga.so
 system_ext/lib64/libcomposerextn.qti.so
@@ -1283,10 +1279,6 @@ system_ext/lib64/libsmomoconfig.qti.so
 system_ext/lib64/vendor.qti.hardware.limits@1.0.so
 system_ext/lib64/vendor.qti.hardware.limits@1.1.so
 system_ext/lib64/vendor.qti.hardware.iop@2.0.so
-system_ext/lib64/vendor.qti.hardware.perf@2.0.so
-system_ext/lib64/vendor.qti.hardware.perf@2.1.so
-system_ext/lib64/vendor.qti.hardware.perf@2.2.so
-system_ext/lib64/vendor.qti.hardware.perf@2.3.so
 system_ext/lib64/vendor.qti.qspmhal@1.0.so
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.servicetracker@1.2-service
@@ -1319,9 +1311,6 @@ vendor/lib/libqti-iopd.so
 vendor/lib/libskewknob.so
 vendor/lib/vendor.qti.hardware.iop@1.0.so
 vendor/lib/vendor.qti.hardware.iop@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.0.so
-vendor/lib/vendor.qti.hardware.perf@2.1.so
-vendor/lib/vendor.qti.hardware.perf@2.2.so
 vendor/lib/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib/vendor.qti.qspmhal@1.0.so
@@ -1342,9 +1331,6 @@ vendor/lib64/libskewknob.so
 vendor/lib64/libsplh.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.0.so
-vendor/lib64/vendor.qti.hardware.perf@2.1.so
-vendor/lib64/vendor.qti.hardware.perf@2.2.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
 vendor/lib64/vendor.qti.qspmhal@1.0-impl.so
 vendor/lib64/vendor.qti.qspmhal@1.0.so
