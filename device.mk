@@ -112,6 +112,7 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 $(call inherit-product, $(LOCAL_PATH)/platform/partition.mk)
 
 # Permissions
+$(call inherit-product, $(LOCAL_PATH)/android/permissions/boost_framework_permissions.mk)
 $(call inherit-product, $(LOCAL_PATH)/android/permissions/common_feature_permissions.mk)
 
 # Power
