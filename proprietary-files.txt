@@ -1317,6 +1317,8 @@ vendor/lib/vendor.qti.qspmhal@1.0.so
 vendor/lib64/hw/vendor.qti.hardware.servicetracker@1.2-impl.so
 vendor/lib64/libadaptlaunch.so
 vendor/lib64/libappclassifier.so
+vendor/lib64/libgameoptfeature.so
+vendor/lib64/libgplaf.so
 vendor/lib64/liblmutils-ns.so
 vendor/lib64/libmemperfd.so
 vendor/lib64/libmeters-ns.so
@@ -1329,6 +1331,7 @@ vendor/lib64/libqti-iopd.so
 vendor/lib64/libreffeature.so
 vendor/lib64/libskewknob.so
 vendor/lib64/libsplh.so
+vendor/lib64/libvideooptfeature.so
 vendor/lib64/vendor.qti.hardware.iop@1.0.so
 vendor/lib64/vendor.qti.hardware.iop@2.0.so
 vendor/lib64/vendor.qti.power.pasrmanager@1.0.so
