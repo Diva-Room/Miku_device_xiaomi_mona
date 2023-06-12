@@ -4,6 +4,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Perf (TensorFlow)
+PRODUCT_PACKAGES += \
+    libtflite
+
+# PSI
+PRODUCT_PACKAGES += \
+    libpsi.vendor
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson
