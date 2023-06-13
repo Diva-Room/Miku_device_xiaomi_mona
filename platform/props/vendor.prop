@@ -298,6 +298,7 @@ ro.vendor.extension_library=libqti-perfd-client.so
 ro.vendor.perf-hal.ver=2.2
 ro.vendor.perf.scroll_opt=1
 ro.vendor.qspm.enable=true
+vendor.pasr.activemode.enabled=false
 vendor.power.pasr.enabled=false
 
 # QSD 
@@ -350,9 +351,6 @@ sys.vendor.shutdown.waittime=500
 
 # Time
 persist.timed.enable=true
-
-# Touchfeature
-ro.vendor.touchfeature.type=151
 
 # USB
 vendor.usb.diag.func.name=ffs

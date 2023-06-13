@@ -42,7 +42,6 @@
 
 # Touch
 /dev/xiaomi-touch                                          u:object_r:vendor_touchfeature_device:s0
-/vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service   u:object_r:vendor_touchfeature_device:s0
 
 # Vibrator
 /vendor/bin/hw/vendor\.qti\.hardware\.vibrator\.service\.xiaomi_mona                            u:object_r:hal_vibrator_default_exec:s0

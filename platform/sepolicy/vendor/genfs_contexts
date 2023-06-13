@@ -16,9 +16,6 @@ genfscon sysfs /bus/iio/devices u:object_r:vendor_sysfs_iio:s0
 genfscon sysfs /devices/platform/us_prox.0/iio:device1 u:object_r:vendor_sysfs_iio:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pmk8350@0:vadc@3100/iio:device0 u:object_r:vendor_sysfs_iio:s0
 
-# Touch
-genfscon sysfs /class/touch/touch_dev/palm_sensor u:object_r:vendor_sysfs_sensors:s0
-
 # Wakeup nodes
 genfscon sysfs /devices/platform/goodix_ts.0/wakeup u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/1103_00.01.00/wakeup u:object_r:sysfs_wakeup:s0

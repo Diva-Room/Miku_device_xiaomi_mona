@@ -1658,15 +1658,6 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touch Feature - from MONA_V14.0.2.0.TKVCNXM
-vendor/bin/hw/vendor.xiaomi.hw.touchfeature@1.0-service|d37dd25f48cdeb1f90881a70773a1b5ba76a4b51
-vendor/etc/init/vendor.xiaomi.hw.touchfeature@1.0-service.rc|d092d92137d52765ea696ebf8f2a89ef67c93870
-vendor/etc/vintf/manifest/vendor.xiaomi.hw.touchfeature@1.0-service.xml|96cd6606fc97c995d808ba1f83fa148fe6f37784
-vendor/lib/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so|b52513ab223dee6602c8babb59fb9498650e08b4
-vendor/lib/vendor.xiaomi.hw.touchfeature@1.0.so|4276c4722c15f21deb5d5e2e972903d6c9031ffa
-vendor/lib64/hw/vendor.xiaomi.hw.touchfeature@1.0-impl.so|e98205adf2e828e7680bb646a9f8b0a02a8d06f0
-vendor/lib64/vendor.xiaomi.hw.touchfeature@1.0.so|d5e198eb6c1379da0b6911220a17b5aaf03ef0d5
-
 # Touchscreen - from MONA_V14.0.2.0.TKVCNXM
 vendor/firmware/s3908p_xiaomi_k9b_spi.img|00949c8683a11b1d72088fd2d3702f59e13d494c
 
