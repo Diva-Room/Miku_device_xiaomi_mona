@@ -1,16 +1,8 @@
-type vendor_mfp-daemon, domain;
-type vendor_mfp-daemon_exec, exec_type, vendor_file_type, file_type;
 type vendor_fingerprint_data_file, data_file_type, file_type;
 type vendor_fingerprint_device, dev_type;
 type vendor_hal_fingerprint_hwservice_xiaomi, hwservice_manager_type;
 
 vendor_internal_prop(vendor_fp_info_prop)
-
-hal_server_domain(vendor_mfp-daemon, hal_fingerprint)
-init_daemon_domain(vendor_mfp-daemon)
-
-allow vendor_mfp-daemon vendor_hal_fingerprint_hwservice_xiaomi:hwservice_manager { add find };
-allow vendor_mfp-daemon hidl_base_hwservice:hwservice_manager add;
 
 #Allow access to goodix device
 allow hal_fingerprint_default vendor_fingerprint_device:chr_file rwx_file_perms;
@@ -49,20 +41,3 @@ allow hal_fingerprint_default fingerprint_vendor_data_file:dir create_dir_perms;
 allow hal_fingerprint_default fingerprint_vendor_data_file:file create_file_perms;
 allow hal_fingerprint_default vendor_fingerprint_data_file:dir rw_dir_perms;
 allow hal_fingerprint_default vendor_fingerprint_data_file:file create_file_perms;
-
-# Mfp
-set_prop(vendor_mfp-daemon, vendor_fp_prop)
-set_prop(vendor_mfp-daemon, vendor_fp_info_prop)
-
-allow vendor_mfp-daemon vendor_hal_perf_hwservice:hwservice_manager { find };
-
-allow vendor_mfp-daemon vendor_fingerprint_data_file:dir create_dir_perms;
-allow vendor_mfp-daemon vendor_fingerprint_data_file:file create_file_perms;
-allow vendor_mfp-daemon tee_device:chr_file rw_file_perms;
-allow vendor_mfp-daemon vendor_fingerprint_device:chr_file rwx_file_perms;
-allow vendor_mfp-daemon fingerprint_vendor_data_file:dir create_dir_perms;
-allow vendor_mfp-daemon fingerprint_vendor_data_file:file create_file_perms;
-allow vendor_mfp-daemon input_device:dir r_dir_perms;
-allow vendor_mfp-daemon input_device:chr_file rw_file_perms;
-allow vendor_mfp-daemon self:netlink_socket create_socket_perms_no_ioctl;
-allow vendor_mfp-daemon self:capability sys_nice;

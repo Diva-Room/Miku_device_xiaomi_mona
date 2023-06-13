@@ -19,6 +19,7 @@
 #include <hardware/hw_auth_token.h>
 
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <android-base/strings.h>
 #include <android-base/unique_fd.h>
 #include <hardware/hardware.h>
@@ -79,6 +80,7 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
     if (!mDevice) {
         ALOGE("Can't open HAL module");
     } else {
+        base::SetProperty("persist.vendor.sys.fp.vendor", "goodix_fod");
         device = mDevice;
     }
     touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));

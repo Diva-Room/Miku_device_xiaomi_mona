@@ -803,8 +803,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint - from MONA_V14.0.2.0.TKVCNXM
-vendor/bin/hw/mfp-daemon|dd6ce3657ff51540f69f4730d1e07a4578325168
-vendor/etc/init/init.mfp-daemon.rc|8e5ae1b84f8f2ab8641a4f5b603ba4d14b6c3810|953b3abc876b101f066d20fc1a5789ab9e07a8d5
 vendor/lib64/com.fingerprints.extension@3.0.so|9e9bf48b9dff08f500734027f7bb5e382df69fef
 vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.lahaina.so|4aff24285c4c33803cdc698ae0d30e8a0458a54f
 vendor/lib64/libgf_hal.so|52a84e0028902035e0c1bf62b3e2c774340f748b
