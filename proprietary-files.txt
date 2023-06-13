@@ -1628,29 +1628,12 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so
 # Soter service (Tencent) - from MONA_V14.0.2.0.TKVCNXM
 -vendor/app/SoterService/SoterService.apk|2ff033fff129c8fcc61d4e313c5b315a0bbbf2e8
 
-# Thermal - from MONA_V14.0.2.0.TKVCNXM
-vendor/bin/mi_thermald|4454eecbb2a768960290162b77e74c1f2131dedc
-vendor/lib64/libthermalclient.so|7bcb4af9a6ae8d12bb0b2749c85e2ff1473678aa
-
-# Thermal Config - from MONA_V14.0.2.0.TKVCNXM
-vendor/etc/thermal-4k.conf|d08117be575efd600a47f80f3abccc449bf136af
-vendor/etc/thermal-8k.conf|4a034c23e2d2e9af001cb4b60f56969f8b2d5315
-vendor/etc/thermal-camera.conf|29ad5b53075cda5ac75c6b98417bf79bae9b048a
-vendor/etc/thermal-chg-only.conf|ae4c3e2e3ed97a55d44913ecf95777ef7577bd3e
-vendor/etc/thermal-class0.conf|be4dcbb59877f3f133be657209ce7e46ef8b9e01
-vendor/etc/thermal-engine.conf|c6c9312b7c7b52926cf7d0fc9bff933d90967100
-vendor/etc/thermal-huanji.conf|8685975d92ec95224cc3c87388dda6c8bb110772
-vendor/etc/thermal-map.conf|67e00c9385e536a547a3953583368913f367b84d
-vendor/etc/thermal-mgame.conf|248bc148fbd8a9e4fa827b4db6fb915e19cddff0
-vendor/etc/thermal-navigation.conf|44475489da690469f1f44eef8a48aca84c97a20e
-vendor/etc/thermal-nolimits.conf|c134e37c8a34ab5203fefb2c7920b273b7122d50
-vendor/etc/thermal-normal.conf|14b06317b6bb4b5402c75e97267a20d6ba69adfc
-vendor/etc/thermal-phone.conf|c7fd269a1243d2c2bf9b95c4ef5cb47dfea5a4a4
-vendor/etc/thermal-tgame.conf|95fd98a27b7fb63aa90bca140af6581abf56b568
-vendor/etc/thermal-video.conf|285f9eba924f6463727af9f212301d5d4f397af6
-vendor/etc/thermal-videochat.conf|a3125749b844a368cba551729a117b180915af62
-vendor/etc/thermal-youtube.conf|cd03a36f2c2d26827142d59e33db858ddaaae638
-vendor/etc/thermald-devices.conf|9117f9c7bead06e28658255add7123df47f9ce91
+# Thermal
+vendor/bin/thermal-engine
+vendor/etc/init/init_thermal-engine.rc
+vendor/etc/thermal-engine.conf
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Time services
 -vendor/app/TimeService/TimeService.apk

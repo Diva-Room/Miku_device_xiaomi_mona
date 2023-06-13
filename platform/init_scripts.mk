@@ -13,7 +13,6 @@ PRODUCT_PACKAGES += \
     init.class_main.sh \
     init.kernel.post_boot-yupik.sh \
     init.kernel.post_boot.sh \
-    init.mi_thermald.rc \
     init.qcom.early_boot.sh \
     init.qcom.factory.rc \
     init.qcom.rc \
