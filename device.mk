@@ -34,6 +34,9 @@ $(call inherit-product, $(LOCAL_PATH)/platform/audio.mk)
 # Bluetooth
 $(call inherit-product, $(LOCAL_PATH)/platform/bluetooth.mk)
 
+# Boost Framework
+TARGET_SUPPORT_MIKU_BOOST_FRAMEWORK := true
+
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
