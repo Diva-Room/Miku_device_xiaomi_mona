@@ -4,19 +4,6 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-# Perf 
-PRODUCT_BOOT_JARS += \
-    QPerformance \
-    UxPerformance
-
-# Perf (TensorFlow)
-PRODUCT_PACKAGES += \
-    libtflite
-
-# PSI
-PRODUCT_PACKAGES += \
-    libpsi.vendor
-
 # QMI
 PRODUCT_PACKAGES += \
     libjson

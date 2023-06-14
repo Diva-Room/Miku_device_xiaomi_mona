@@ -6,6 +6,4 @@
 
 # Thermal
 PRODUCT_PACKAGES += \
-    android.hardware.thermal@2.0 \
-    android.hardware.thermal@2.0.vendor \
     android.hardware.thermal@2.0-service.qti
