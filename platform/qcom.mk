@@ -5,10 +5,6 @@
 #
 
 # Perf 
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.perf@2.2.vendor \
-    vendor.qti.hardware.perf@2.3
-
 PRODUCT_BOOT_JARS += \
     QPerformance \
     UxPerformance
