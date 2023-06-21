@@ -1,5 +1,5 @@
 # All unpinned blobs below are extracted from Nothing Phone (1) A063_1.5.4
-# ACDB - from MONA_V14.0.2.0.TKVCNXM
+# ACDB - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/acdbdata/Forte/Forte_Bluetooth_cal.acdb|1c0c6530dbd15270dd8d78abe13c1f1b5ee4816e
 vendor/etc/acdbdata/Forte/Forte_Codec_cal.acdb|e205e84ca538a7c5591cd5b6b30bdfdbcdb9fb8a
 vendor/etc/acdbdata/Forte/Forte_General_cal.acdb|4c820f66b94bab9f8033a360c727b1cc27ea5989
@@ -28,7 +28,7 @@ vendor/etc/init/vendor.qti.adsprpc-guestos-service.rc
 vendor/lib64/libadsp_default_listener.so
 vendor/lib64/libadsprpc.so
 
-# ADSP Modules - from MONA_V14.0.2.0.TKVCNXM
+# ADSP Modules - from MONA_V14.0.4.0.TKVCNXM
 vendor/lib/rfsa/adsp/bm2n06.bin|1575b125138e163894800532fbdf145f3a814d9c
 vendor/lib/rfsa/adsp/bm2n08.bin|e906da095f37cf090f63003c14cdd610b79bb9c8
 vendor/lib/rfsa/adsp/bm2n13.bin|f36d57de52a30e6a86c11145c597d7e8e0ecc48e
@@ -83,7 +83,7 @@ vendor/lib/rfsa/adsp/misound_res_spk.bin|6a57ba91dc65c9e8c41ff95b41ce41040a67864
 vendor/lib64/rfsa/adsp/libsns_device_mode_skel.so|733a5b8861bb6eb1285bb8982992531c94800997
 vendor/lib64/rfsa/adsp/libsns_low_lat_stream_skel.so|c30bb30eecf968e02f72c055d3cc13a7f769644f
 
-# Audio configs - from MONA_V14.0.2.0.TKVCNXM
+# Audio configs - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/audio/sku_yupik/audio_platform_info_yupikidp.xml|d054b7bd4285a735ca451c9759f2f1a98bffd933
 vendor/etc/audio/sku_yupik/mixer_paths_overlay_dynamic.xml|f2d14feb592df30b7ff19a603b09bea09f14f6ee
 vendor/etc/audio/sku_yupik/mixer_paths_overlay_static.xml|666b9b87f65f7f752768175bf1199fc99e067f60
@@ -91,7 +91,7 @@ vendor/etc/audio/sku_yupik/mixer_paths_yupikidp.xml|dd01937c401b469abdae935af525
 vendor/etc/audio/sku_yupik/sound_trigger_mixer_paths_yupikidp.xml|e5b9c1bb730ac1e989da6a852ed04f7756c4eea6
 vendor/etc/audio/sku_yupik/sound_trigger_platform_info.xml|99a873cb8a3d912537e0c6c066c78d93804ec044
 
-# AudioFW - from MONA_V14.0.2.0.TKVCNXM
+# AudioFW - from MONA_V14.0.4.0.TKVCNXM
 vendor/firmware/aw882xx_pid_1852_acf.bin|76b29872574da15ca3f7c799fbb55404933d48bd
 vendor/firmware/aw882xx_pid_1852_monitor.bin|2620c3853ec578931d7ecd3e14105368185b0840
 vendor/firmware/aw882xx_pid_2032_acf.bin|07c53fd32657927051a8a64ca0acb653a12ac110
@@ -124,7 +124,7 @@ vendor/lib/libvideoNS.so|d4ecaa05d043e4d125ec3b1d06901d8a48091e7c
 vendor/lib64/libcomprcapture.so|f3e99ca846a2e9ae54cffb639cc2a33951794f33
 vendor/lib64/libresampler.so|b38622335b7a883e06f4f48e0f8df33c179d034f
 
-# Audio FX modules - from MONA_V14.0.2.0.TKVCNXM
+# Audio FX modules - from MONA_V14.0.4.0.TKVCNXM
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|3c42dff6da0571acd9ea466983c7f6354d588bb3
 vendor/lib/soundfx/libasphere.so|a742e8196f321571132113e0052b9c947cb9d37a
@@ -170,7 +170,7 @@ vendor/lib64/libcacertclient.so
 vendor/lib64/libjnihelper.so
 vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 
-# Camera - from MONA_V14.0.2.0.TKVCNXM
+# Camera - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/camera/CFR_para_MACRO_V01.bin|8f680aaed83537f7a5ce8a8945f8aed0f399fcb7
 vendor/etc/camera/CFR_para_MACRO_V01_L.bin|8f680aaed83537f7a5ce8a8945f8aed0f399fcb7
 vendor/etc/camera/CFR_para_MACRO_V01_SN.bin|8f680aaed83537f7a5ce8a8945f8aed0f399fcb7
@@ -279,7 +279,7 @@ vendor/lib/libcamxtintlessalgo.so|ed91f8b6eeb04f468a0db2dc1c0006b20a352be1
 vendor/lib/libjpege.so|73f153b54286a2ff2252b1709d83b615e99930ea
 vendor/lib/libmctfengine_stub.so|3f35040c6566c284a024610ae63df0104fd1feb7
 vendor/lib/libmialgo_ai_vision.so|c27de3a2889164c01d33933b9cc1c7c1bdf61a5a
-vendor/lib/libmialgoengine.so|35b202bd924bf88a230db895e8ea663dcb97c4ac
+vendor/lib/libmialgoengine.so|983699a4313758b2b3d20195deaa2a30b2621d53
 vendor/lib/libmmcamera_bestats.so|d915c3c22661ff770d1e44544b7969f4d39f4dee
 vendor/lib/libmmcamera_cac3.so|fd8cd7fb98eb356a692fba736ec406da64984852
 vendor/lib/libmmcamera_faceproc.so|90ae17164f6f0bc9e8b04600f55701c5b2e37e13
@@ -435,9 +435,9 @@ vendor/lib64/com.qualcomm.mcx.distortionmapper.so|c02151209a2fcbb4d53473e60ff39b
 vendor/lib64/com.qualcomm.mcx.linearmapper.so|bf5a0c30e1e38fd728c5cb24ce21751b913d01cf
 vendor/lib64/com.qualcomm.mcx.policy.mfl.so|094e697826d8998ae33b536d4df3f38838356573
 vendor/lib64/com.qualcomm.qti.mcx.usecase.extension.so|09cf4e537f6bb120bb36e2a3d02c678cace976d8
-vendor/lib64/hw/camera.qcom.so|c387daaf73610b6936bec4c92a0c3ceda7b04f85|d06c88df9a9affb91465868dc12590c23b87f15b
+vendor/lib64/hw/camera.qcom.so|d7bf5e3ab4046f119689200c751069939d2d1d42|b83fdf29bcd05e68e72d85d8e763c14ca5ed12a2
 vendor/lib64/hw/camera.xiaomi.so|948564c75d9f2fe44027c63cf997ba75b210bc42|a8564a9650e37a25ba68849862b377bc8c7a589f
-vendor/lib64/hw/com.qti.chi.override.so|508ad9b4bfdf659b9b208dbda80c8e9cb28be5e1
+vendor/lib64/hw/com.qti.chi.override.so|8b163ec169cf5ff86fac436c9faf8823adb0f349
 vendor/lib64/libAF.so|b579ab324a6004cc7553e57473b19bbe6127b5f9
 vendor/lib64/libFlickerDet.so|02f4581aba03c684f389756f7744c3f3ec92f132
 vendor/lib64/libI420colorconvert.so|fee26376079bee2fa8512d00ced3304e32ec2225
@@ -511,7 +511,7 @@ vendor/lib64/libmialgo_sd.so|bfec02a71b148bfc3d24fb5f54d8e18b2d2c0691
 vendor/lib64/libmialgo_utils.so|7d625f50cdd1fafa839914eb8e96ac0355229b4d
 vendor/lib64/libmialgo_video_colourkeeping.so|9ea8ac8083dbd5aef5ced732ff55b17611f79610
 vendor/lib64/libmialgo_video_seg.so|0f2291456b55fa53cae4e89475951f76e81e34d8
-vendor/lib64/libmialgoengine.so|b3a7e4bad637fa71b0bf9ba8b0a6bea88673c889
+vendor/lib64/libmialgoengine.so|f8a987f88600f0396ceb8d9b3ce730c00b71ceea
 vendor/lib64/libmibokeh_855.so|b0bbf6b2ff3d53bf16d49abdac997fc2c025700b
 vendor/lib64/libmibokeh_mask.so|13366635b065314fb52b052fa48cd30ddd683e9b
 vendor/lib64/libmibokeh_mask_dsp.so|aed337e948dacdfbf161f1d04b7266b1b32cdcc4
@@ -570,7 +570,7 @@ vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
-# Charger (Xiaomi Turbo Charge) - from MONA_V14.0.2.0.TKVCNXM
+# Charger (Xiaomi Turbo Charge) - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/batterysecret|7b4df07fcc408855c54ce47cead3516d7a6055b8
 vendor/bin/hvdcp_opti|ee091895e824d9848efaa37a2f732e5402b018c1
 vendor/bin/init.qti.chg_policy.sh|9a96b05abdfe149eb8a7e20a791284e84b5fffe0
@@ -694,7 +694,7 @@ vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so
 
-# Consumer IR - from MONA_V14.0.2.0.TKVCNXM
+# Consumer IR - from MONA_V14.0.4.0.TKVCNXM
 vendor/lib64/hw/consumerir.lahaina.so|dc6cf8314795b8eb463a2c9336e796a652950f8c
 
 # Display
@@ -720,7 +720,7 @@ vendor/lib64/libtinyxml2_1.so
 # Display (HDR)
 vendor/lib64/libhdr_tm.so
 
-# Display (Stock) - from MONA_V14.0.2.0.TKVCNXM
+# Display (Stock) - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/qdcm_calib_data_xiaomi_42_02_0a_cmd_mode_dsc_dsi_panel.xml|6fb274d8b227cb62a8d9005e8b39c8d3abb2e6ec|deb1c23994ef882f8c290f39b1497240bfdbd1fb
 
 # Display postprocessing
@@ -782,7 +782,7 @@ vendor/lib64/libspl.so
 vendor/lib64/libssd.so
 vendor/lib64/libtrustedapploader.so
 
-# DRM (Widevine) - from MONA_V14.0.2.0.TKVCNXM
+# DRM (Widevine) - from MONA_V14.0.4.0.TKVCNXM
 -vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.3-service.widevine.xml|ebebcf8f367641480cf7d512fc06e6ab777527be
 vendor/bin/hw/android.hardware.drm@1.3-service.widevine|07b8d21fb76abd377428a6d1b52d6aadfc5892a1
 vendor/etc/init/android.hardware.drm@1.3-service.widevine.rc|a9ce64f68c86725c06c1b1429e90b04ff96ebf60
@@ -802,7 +802,7 @@ vendor/lib64/hw/vendor.qti.esepowermanager@1.1-impl.so
 vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
-# Fingerprint - from MONA_V14.0.2.0.TKVCNXM
+# Fingerprint - from MONA_V14.0.4.0.TKVCNXM
 vendor/lib64/com.fingerprints.extension@3.0.so|9e9bf48b9dff08f500734027f7bb5e382df69fef
 vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.lahaina.so|4aff24285c4c33803cdc698ae0d30e8a0458a54f
 vendor/lib64/libgf_hal.so|52a84e0028902035e0c1bf62b3e2c774340f748b
@@ -884,14 +884,14 @@ vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/xtwifi.conf
 
-# Graphics firmware - from MONA_V14.0.2.0.TKVCNXM
+# Graphics firmware - from MONA_V14.0.4.0.TKVCNXM
 vendor/firmware/a660_gmu.bin|607402e7c1c49f486258e5e02780e74fcf7311e1
 vendor/firmware/a660_sqe.fw|8e6becfbcff6ff6e64b5edb6f135cc6f656d4ee1
 vendor/firmware/a660_zap.b00|8db2ba7a6da65a4d35d9c5da0a49493efd27913a
-vendor/firmware/a660_zap.b01|4bd2f7e501f53b221ffac0fcc6044fbb9dc13d0d
+vendor/firmware/a660_zap.b01|272337873a5a6255505f3d528746be636c923789
 vendor/firmware/a660_zap.b02|bcbdf56fca034c66a9e44242587ed25a1ffe2abe
-vendor/firmware/a660_zap.elf|4d3e71c6d3b3b74b666e66e440c837fac51bf317
-vendor/firmware/a660_zap.mdt|dc7fa5623cc3471418f0e07232ff170a42516177
+vendor/firmware/a660_zap.elf|bf6929cea550006d0a87e9435ed0f922040a2943
+vendor/firmware/a660_zap.mdt|77426066c58e1791257288c79f49559121d5f8ec
 
 # Graphics
 vendor/gpu/kbc/sequence_manifest.bin
@@ -930,7 +930,7 @@ vendor/lib64/libgsl.so
 vendor/lib64/libllvm-glnext.so
 vendor/lib64/libllvm-qcom.so
 
-# IFAA  - from MONA_V14.0.2.0.TKVCNXM
+# IFAA  - from MONA_V14.0.4.0.TKVCNXM
 -vendor/app/IFAAService/IFAAService.apk|e7db83456fdab6e6c23efab6dfeaa498abb527f0
 
 # IMS
@@ -999,20 +999,20 @@ vendor/lib64/vendor.qti.ims.rcsuce@1.2.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# IPA - from MONA_V14.0.2.0.TKVCNXM
+# IPA - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/init/ipa_fws.rc|f1826b81077f51470c97781823f109f12361ac8b
 vendor/firmware/yupik_ipa_fws.b00|f16e03fc90554add646c29ad2a9eb1cfb34aea01
-vendor/firmware/yupik_ipa_fws.b01|1667bf884ce7e0b63108b62c00d343932ce7fd47
+vendor/firmware/yupik_ipa_fws.b01|896ad028f068f4f8fa117c5b4e95dfecd86b3e01
 vendor/firmware/yupik_ipa_fws.b02|c0f5259e45f67f322459e7afde30cba608b9ea5f
 vendor/firmware/yupik_ipa_fws.b03|c07cfef57f8f694b4cee41e78700614efbedf2bc
 vendor/firmware/yupik_ipa_fws.b04|7aa0ec649f20af523f21c6e19014987f86f18dff
-vendor/firmware/yupik_ipa_fws.elf|a07f45844271b9b7993c10f18d233648265c681a
-vendor/firmware/yupik_ipa_fws.mdt|52a2cd93afba55684c7f797cf257e7de877a03d2
+vendor/firmware/yupik_ipa_fws.elf|3c05b5a38c581303668623d5f3a043d643166fc0
+vendor/firmware/yupik_ipa_fws.mdt|728a10e16239b69522b175d7e4f5e20b047a15f8
 
 # IRQ balance
 vendor/bin/msm_irqbalance
 
-# Kernel - from MONA_V14.0.2.0.TKVCNXM
+# Kernel - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/vendor_modprobe.sh|edf2ef8fd4300af6bf146931b56f80801edbe5f3
 
 # Keymaster
@@ -1023,7 +1023,7 @@ vendor/lib64/libkeymasterprovision.so
 vendor/lib64/libkeymasterutils.so
 vendor/lib64/libqtikeymaster4.so
 
-# Listen - from MONA_V14.0.2.0.TKVCNXM
+# Listen - from MONA_V14.0.4.0.TKVCNXM
 vendor/lib/hw/sound_trigger.primary.lahaina.so|fa301aea80a4ae7c54e9c7a2c7c72de9ad27ed3e
 vendor/lib/libcapiv2svacnn.so|a2219c156bb4978ae8444120417ca1f34e35504a
 vendor/lib/libcapiv2svarnn.so|165509096605c4afd585762a2f6e467f55954a23
@@ -1062,7 +1062,7 @@ vendor/lib64/libqcodec2_platform.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 
-# Media Profiles - from MONA_V14.0.2.0.TKVCNXM
+# Media Profiles - from MONA_V14.0.4.0.TKVCNXM
 -vendor/etc/vintf/manifest/c2_manifest_vendor.xml|735eb3238894207a95d3f5133422b9f76927a73f|dfaad7360e85bf2d1a8293bb878a4f0edc70b1db
 vendor/bin/hw/vendor.qti.media.c2@1.0-service|d2f330fa2f4b2548e36155cddba193b6695f00a7
 vendor/etc/init/init.qti.media.rc|ab36de06c01003fa6f665bc38709417c26d99d62
@@ -1092,7 +1092,7 @@ vendor/etc/seccomp_policy/codec2.vendor.base-arm.policy|3dd480257e5c2ad2f776f497
 vendor/etc/seccomp_policy/codec2.vendor.ext-arm.policy|a134d3d5d74294ca8164056b42389b1c7dbb2b65
 vendor/etc/video_system_specs.json|fa29471cada89e61aba80dc4dacbd7c9d2f86d5e
 
-# Media Dolby Vision Codec - from MONA_V14.0.2.0.TKVCNXM
+# Media Dolby Vision Codec - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/hw/dolbycodec2|186f07732444177f5d719c31d99a7420a54cb025|b06ec5e60e9f11bb3424df774ff825e6b9f93b99
 vendor/etc/dolby_vision.cfg|05c918ea097ac9cc07daeb0b7f292f6cc0edc2eb
 vendor/etc/init/dolbycodec2.rc|1ea8b363e94fd4f5410cadceb30de8229fb38045
@@ -1112,9 +1112,9 @@ vendor/lib/libdovi.so|d88f42c44f420cc04fb019dd2f990ed304c4c7c0
 vendor/lib/libsfplugin_ccodec_utils.so|7d2c82483128507e5df7fef190c8d8a7cda46fb7
 vendor/lib64/libavservices_minijail_vendor.so|58a1254dca3731bff67fa37b98f9bbba6ac54240
 
-# Media VPU FW - from MONA_V14.0.2.0.TKVCNXM
+# Media VPU FW - from MONA_V14.0.4.0.TKVCNXM
 vendor/firmware/vpu20_1v.b00|fd02481b651e371c255ec709a09846572533aa10
-vendor/firmware/vpu20_1v.b01|4a0a733af79a2fcc9ac96a3d06bcae0b9ecf7729
+vendor/firmware/vpu20_1v.b01|69a1f3ad0d507fd5e4ae63a084c8ecb86980093d
 vendor/firmware/vpu20_1v.b02|8f8f4455716e44ae53d19b01900ea48b4b0a2b96
 vendor/firmware/vpu20_1v.b03|7772b18b16e520641e8051fd6284384e9b0e1939
 vendor/firmware/vpu20_1v.b04|dc6fe7b8d020a4d02f4f4fe073f5f4f759be25dd
@@ -1133,11 +1133,11 @@ vendor/firmware/vpu20_1v.b16|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/firmware/vpu20_1v.b17|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/firmware/vpu20_1v.b18|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/firmware/vpu20_1v.b19|c1756e0567d10a1173f481cd367ff4637b2dd77f
-vendor/firmware/vpu20_1v.mbn|fd8800a0728e68e7f41a43ae31e31f7599549078
-vendor/firmware/vpu20_1v.mdt|8ec7dea523104ef89188a2acbcebc660d9fa03fc
+vendor/firmware/vpu20_1v.mbn|b0a0bdb1c25e85a0d2060f8a6009abaafb4f175d
+vendor/firmware/vpu20_1v.mdt|7f2f66652a3076acf507191d012d1c027d2c92bd
 vendor/firmware/vpu20_1v_unsigned.mbn|a9388297a1b789c0793cb8faa2590296943413a8
 
-# Mlipay - from MONA_V14.0.2.0.TKVCNXM
+# Mlipay - from MONA_V14.0.4.0.TKVCNXM
 -vendor/etc/vintf/manifest/manifest_vendor.xiaomi.hardware.mlipay.xml|27aaea2ab58ace6555a634dc60ea062736342eb4
 vendor/bin/mlipayd@1.1|9f41a62c62f584c4bf4a52115fc09678b163ad00
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
@@ -1147,7 +1147,7 @@ vendor/lib64/vendor.xiaomi.hardware.mlipay@1.0.so|b4fc7cfb1d5520212bd19fbec760a0
 vendor/lib64/vendor.xiaomi.hardware.mlipay@1.1.so|eb460f5ff22150d98574b3c20920b1d9b45e6898
 vendor/lib64/vendor.xiaomi.hardware.mtdservice@1.0.so|55ca5404bbb1cb4bc0dc9a11b73f1df667e0a3ba
 
-# Neural networks - from MONA_V14.0.2.0.TKVCNXM
+# Neural networks - from MONA_V14.0.4.0.TKVCNXM
 -vendor/etc/vintf/manifest/android.hardware.neuralnetworks@1.3-service-qti.xml|ac07e83ba7c2a87a2f216f04ec84df4539ea8507
 vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-qti|91e196b8982cc700d177e65856b9cefa6cc61d9b
 vendor/etc/init/android.hardware.neuralnetworks@1.3-service-qti.rc|4b7f2c5f914f3eef38f19936c0a06efc09b5b28c
@@ -1157,13 +1157,13 @@ vendor/lib64/unnhal-acc-common.so|85794b7757d3d80090326f8eddeefdf928eab259
 vendor/lib64/unnhal-acc-gpu.so|71d6930c97ea9256650bb477905b06806c6c143f
 vendor/lib64/unnhal-acc-htp.so|59e5bc6fab0e15310cb15237c8f0a984edb427be
 
-# NFC - from MONA_V14.0.2.0.TKVCNXM
+# NFC - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/libnfc-nci.conf|e3c02b4855b314bd7be008db6a7c8fc9d855147c
 vendor/etc/libnfc-nxp.conf|fc7d940f35a628b12bb2c8fdb94aa0b95341907e
 vendor/etc/libnfc-nxp_RF.conf|5b8981e737b1608d3035b1bdee8150d63352b747
 vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so|53343c7c5f3ac220b4e1a51576eb1d1264c77a4f
 
-# NVRAM - from MONA_V14.0.2.0.TKVCNXM
+# NVRAM - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/nv_mac|be7386b542eeb66ff36e0924c423f5d0320cdb20
 
 # OMX
@@ -1418,7 +1418,7 @@ vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.1.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.2.so
 vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0.so
 
-# Sensors - from MONA_V14.0.2.0.TKVCNXM
+# Sensors - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/init.qcom.sensors.sh|454c6de8c65b9ad1c41f063544871a4ba0665689
 vendor/bin/sensors.qti|b54ff078ad64e4278cefbad1f1a42a80f3129f74
 vendor/bin/sscrpcd|7b4e6726b976ae97c209d2b16d71ee920a48e254
@@ -1440,14 +1440,14 @@ vendor/lib64/libsnsapi.so|d3a0a75536eeb1014cb6871191f0c3c88a333600
 vendor/lib64/libsnsdiaglog.so|e06a5c86eafedd412f5823463af83e89ba33c865
 vendor/lib64/libssc.so|9224cc752069f4f4b22a77dcbb9b094a41698496
 vendor/lib64/libssc_default_listener.so|da9e3d83340a83b42554b738d8a72b0350f600d7
-vendor/lib64/libssccalapi.so|9c72c02f45667a78ba43b9f1919d745b5314eaf6
+vendor/lib64/libssccalapi.so|cacaf8ef73e4f1dab5fac9cab92f2220a30c3cb6
 vendor/lib64/libultrasound.so|e8534dcc1c735eff196d54ada4db76a38d2ad4dd
 vendor/lib64/sensors.elliptic@2.0.so|963843bef6fc8a17eff19db2337d5e35ec2bf955
 vendor/lib64/sensors.mius.proximity.so|405d6f4c71d1e06dfc5274f6648f7e01b98da48d
 vendor/lib64/sensors.ssc.so|a65814ea2b3703a2ecdac81e844b0c880fc15882
 vendor/lib64/sensors.touch.detect.so|7db295576642545ecefddb9deb2d4b8f40d12c66
 
-# Sensors configs - from MONA_V14.0.2.0.TKVCNXM
+# Sensors configs - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/sensors/config/ak991x_dri_0.json|ca6696d7a268658919ee0e65029fcfd5b414cf87
 vendor/etc/sensors/config/lsm6dso_0.json|3645d8aa637b23083202e00bfa9241f044092b64
 vendor/etc/sensors/config/sns_amd.json|3bf497d118f1549fc4419eadccbea0f2783a88e3
@@ -1487,7 +1487,7 @@ vendor/etc/sensors/config/tmd3719.json|6f34915926a4ca32fc05c535056c8d244aff1894
 vendor/etc/sensors/judge_calibrated.json|5af5cff5ab8f916164cb10fc09ce2a857e2f7f8a
 vendor/etc/sensors/sns_reg_config|10b80bbe06f4d0dc2f50e81e99d7d500288132e2
 
-# Sensors (citsensor) - from MONA_V14.0.2.0.TKVCNXM
+# Sensors (citsensor) - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/hw/vendor.xiaomi.hardware.citsensorservice@1.1-service|5cc9b4e6fb52caba6a7a2e6079ad1e610fe5b485
 vendor/etc/init/vendor.xiaomi.hardware.citsensorservice@1.1-service.rc|09f221139f9adabaec1d08555de69cf23db0be15
 vendor/etc/vintf/manifest/vendor.xiaomi.hardware.citsensorservice@1.1-service.xml|b9a2df0b622a5cd3b999328cad3cd14a45605532
@@ -1515,7 +1515,7 @@ vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
-# Soter service (Tencent) - from MONA_V14.0.2.0.TKVCNXM
+# Soter service (Tencent) - from MONA_V14.0.4.0.TKVCNXM
 -vendor/app/SoterService/SoterService.apk|2ff033fff129c8fcc61d4e313c5b315a0bbbf2e8
 
 # Thermal
@@ -1531,7 +1531,7 @@ vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
 
-# Touchscreen - from MONA_V14.0.2.0.TKVCNXM
+# Touchscreen - from MONA_V14.0.4.0.TKVCNXM
 vendor/firmware/s3908p_xiaomi_k9b_spi.img|00949c8683a11b1d72088fd2d3702f59e13d494c
 
 # Trusted Execution Environment connector
@@ -1544,7 +1544,7 @@ vendor/lib64/libQTEEConnector_listener.so
 vendor/lib64/libQTEEConnector_vendor.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 
-# Vibrator - from MONA_V14.0.2.0.TKVCNXM
+# Vibrator - from MONA_V14.0.4.0.TKVCNXM
 vendor/firmware/0_click_P_RTP.bin|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/firmware/1_doubelClick_P_RTP.bin|da39a3ee5e6b4b0d3255bfef95601890afd80709
 vendor/firmware/2_tick_P_RTP.bin|da39a3ee5e6b4b0d3255bfef95601890afd80709
@@ -1555,7 +1555,7 @@ vendor/firmware/aw8622x_haptic.bin|71e589fd9d9150f288bec81a800aa5014619c183
 vendor/firmware/aw8622x_osc_rtp_24K_5s.bin|9f32c9bf0776a566d3254129a028dae9bed76b81
 vendor/firmware/aw8622x_rtp.bin|3c06255839cd1884e8d9826952e9bfc7842dc671
 
-# VNDK - from MONA_V14.0.2.0.TKVCNXM
+# VNDK - from MONA_V14.0.4.0.TKVCNXM
 vendor/etc/public.libraries.txt|ad84f9dba1272556ad18611de930cda8109e9e9b
 
 # VPP
