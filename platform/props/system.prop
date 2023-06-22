@@ -8,6 +8,9 @@ ro.sf.blurs_are_expensive=1
 # Camera 
 camera.disable_zsl_mode=true
 
+# Charger
+ro.charger.enable_suspend=true
+
 # Fuse passthrough
 persist.sys.fuse.passthrough.enable=true
 
