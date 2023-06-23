@@ -1172,6 +1172,9 @@ vendor/lib/libsn100u_fw.so:vendor/lib64/libsn100u_fw.so|53343c7c5f3ac220b4e1a515
 # NVRAM - from MONA_V14.0.4.0.TKVCNXM
 vendor/bin/nv_mac|be7386b542eeb66ff36e0924c423f5d0320cdb20
 
+# Offline Charging - from MONA_V14.0.4.0.TKVCNXM
+system/bin/charger:system/bin/chargeonlymode|28d09becba3da82f0ddbd2dda4cd5cd76bcf094f
+
 # OMX
 vendor/lib/libAlacSwDec.so
 vendor/lib/libApeSwDec.so
