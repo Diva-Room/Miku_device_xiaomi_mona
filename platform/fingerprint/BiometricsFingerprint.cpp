@@ -20,7 +20,6 @@
 
 #include <android-base/logging.h>
 #include <android-base/properties.h>
-#include <android-base/strings.h>
 #include <android-base/unique_fd.h>
 #include <hardware/hardware.h>
 #include <fstream>
@@ -66,8 +65,6 @@ static void set(const std::string& path, const T& value) {
 
 using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
-
-using ::android::base::StartsWith;
 
 android::base::unique_fd touch_fd_;
 fingerprint_device_t* device;
@@ -232,18 +229,12 @@ Return<RequestStatus> BiometricsFingerprint::setActiveGroup(uint32_t gid,
         ALOGE("Bad path length: %zd", storePath.size());
         return RequestStatus::SYS_EINVAL;
     }
-    std::string mutableStorePath = storePath;
-    if (android::base::StartsWith(mutableStorePath, "/data/system/users/")) {
-        mutableStorePath = "/data/vendor_de/";
-        mutableStorePath +=
-                static_cast<std::string>(storePath).substr(strlen("/data/system/users/"));
-    }
-    if (access(mutableStorePath.c_str(), W_OK)) {
+    if (access(storePath.c_str(), W_OK)) {
         return RequestStatus::SYS_EINVAL;
     }
 
     return ErrorFilter(mDevice->set_active_group(mDevice, gid,
-                                                    mutableStorePath.c_str()));
+                                                    storePath.c_str()));
 }
 
 Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
