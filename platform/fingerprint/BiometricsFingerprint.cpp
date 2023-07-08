@@ -67,7 +67,6 @@ using RequestStatus =
         android::hardware::biometrics::fingerprint::V2_1::RequestStatus;
 
 android::base::unique_fd touch_fd_;
-fingerprint_device_t* device;
 
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
@@ -78,7 +77,6 @@ BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevi
         ALOGE("Can't open HAL module");
     } else {
         base::SetProperty("persist.vendor.sys.fp.vendor", "goodix_fod");
-        device = mDevice;
     }
     touch_fd_ = android::base::unique_fd(open(TOUCH_DEV_PATH, O_RDWR));
 }
@@ -405,8 +403,7 @@ void BiometricsFingerprint::setFodStatus(int value) {
 }
 
 void BiometricsFingerprint::setHbmStatus(bool value) {
-    device->extCmd(device, COMMAND_NIT, value ? PARAM_NIT_FOD : PARAM_NIT_NONE);
-
+    sInstance->extCmd(value);
     int buf[MAX_BUF_SIZE] = {TOUCH_ID, THP_FOD_DOWNUP_CTL, value ? FOD_STATUS_ON : FOD_STATUS_OFF};
     ioctl(touch_fd_.get(), TOUCH_IOC_SET_CUR_VALUE, &buf);
 
@@ -430,6 +427,10 @@ Return<void> BiometricsFingerprint::onFingerUp() {
     LOG(INFO) << __func__;
     setHbmStatus(false);
     return Void();
+}
+
+void BiometricsFingerprint::extCmd(bool value) {
+    mDevice->extCmd(mDevice, COMMAND_NIT, value ? PARAM_NIT_FOD : PARAM_NIT_NONE);
 }
 
 } // namespace implementation
