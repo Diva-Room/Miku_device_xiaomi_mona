@@ -803,7 +803,6 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so
 vendor/lib64/vendor.qti.esepowermanager@1.1.so
 
 # Fingerprint - from MONA_V14.0.4.0.TKVCNXM
-vendor/lib64/com.fingerprints.extension@3.0.so|9e9bf48b9dff08f500734027f7bb5e382df69fef
 vendor/lib64/hw/fingerprint.goodix_fod.so:vendor/lib64/hw/fingerprint.lahaina.so|4aff24285c4c33803cdc698ae0d30e8a0458a54f
 vendor/lib64/libgf_hal.so|52a84e0028902035e0c1bf62b3e2c774340f748b
 vendor/lib64/vendor.xiaomi.hardware.fx.tunnel@1.0.so|ab271b272f9cf53ca65ab1e457d5cd8ddebc87f7
