@@ -70,6 +70,8 @@ android::base::unique_fd touch_fd_;
 
 BiometricsFingerprint *BiometricsFingerprint::sInstance = nullptr;
 
+bool fod_ready = false;
+
 BiometricsFingerprint::BiometricsFingerprint() : mClientCallback(nullptr), mDevice(nullptr) {
     sInstance = this; // keep track of the most recent instance
     mDevice = openHal();
@@ -209,7 +211,6 @@ Return<uint64_t> BiometricsFingerprint::getAuthenticatorId() {
 Return<RequestStatus> BiometricsFingerprint::cancel() {
     LOG(INFO) << __func__;
     setHbmStatus(false);
-    setFodStatus(FOD_STATUS_OFF);
     return ErrorFilter(mDevice->cancel(mDevice));
 }
 
@@ -320,13 +321,15 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
                 LOG(INFO) << __func__ << " result: " << static_cast<int32_t>(result) << " vendorCode: " << vendorCode;
                 if (static_cast<int32_t>(result) == FINGERPRINT_ACQUIRED_GOOD) {
                     setHbmStatus(false);
-                    setFodStatus(FOD_STATUS_OFF);
                 } else if (vendorCode == 21 || vendorCode == 23) {
                     /*
                      * vendorCode = 21 waiting for fingerprint authentication
                      * vendorCode = 23 waiting for fingerprint enroll
                      */
-                    setFodStatus(FOD_STATUS_ON);
+                    if (!fod_ready) {
+                        fod_ready = true;
+                        setFodStatus(FOD_STATUS_ON);
+                    }
                 }
                 if (!thisPtr->mClientCallback->onAcquired(devId, result, vendorCode).isOk()) {
                     ALOGE("failed to invoke fingerprint onAcquired callback");
