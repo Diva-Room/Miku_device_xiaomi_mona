@@ -1,0 +1,20 @@
+[
+  { 
+    "repository"   : "proprietary_vendor_firmware",
+    "target_path"  : "vendor/firmware",
+    "branch"       : "TDA",
+    "remote"       : "divalab"
+  },
+  { 
+    "repository"   : "Miku_device_xiaomi_mojin",
+    "target_path"  : "device/xiaomi/mojin",
+    "branch"       : "TDA",
+    "remote"       : "diva-ssh"
+  },
+  { 
+    "repository"   : "Miku_vendor_xiaomi_mona",
+    "target_path"  : "vendor/xiaomi/mona",
+    "branch"       : "TDA",
+    "remote"       : "diva-ssh"
+  }
+]
