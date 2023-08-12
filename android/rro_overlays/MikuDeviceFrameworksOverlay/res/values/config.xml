@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Build fingerprint from stock ROM -->
+    <string name="config_stockFingerprint" translatable="false">Xiaomi/mona/mona:11/RKQ1.210503.001/V12.5.9.0.RKVCNXM:user/release-keys</string>
+</resources>

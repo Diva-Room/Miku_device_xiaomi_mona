@@ -8,6 +8,7 @@
 $(call inherit-product, device/xiaomi/mojin/mojin.mk)
 
 # Overlays
+$(call inherit-product, $(LOCAL_PATH)/platform/rro_overlay.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/android/overlay
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
