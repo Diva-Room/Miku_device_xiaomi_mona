@@ -19,5 +19,8 @@ include $(BOARD_CONFIG_PATH)/kernel.mk
 # OTA Support (Keep mojin compatibility for historical reason)
 TARGET_OTA_ASSERT_DEVICE := mona,mojin
 
+# Properties
+include $(BOARD_CONFIG_PATH)/properties.mk
+
 # Include proprietary files
 include vendor/xiaomi/mona/BoardConfigVendor.mk
