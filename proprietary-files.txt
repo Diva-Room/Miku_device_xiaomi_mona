@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from MONA_V14.0.4.0.TKVCNXM
+# All unpinned blobs below are extracted from MONA_V14.0.6.0.TKVCNXM
 
 # ADSP Modules 
 vendor/lib/rfsa/adsp/bm2n06.bin
