@@ -2,19 +2,19 @@
   { 
     "repository"   : "proprietary_vendor_firmware",
     "target_path"  : "vendor/firmware",
-    "branch"       : "Udon_v2",
+    "branch"       : "Vampire",
     "remote"       : "divalab"
   },
   { 
     "repository"   : "Miku_device_xiaomi_mojin",
     "target_path"  : "device/xiaomi/mojin",
-    "branch"       : "Udon_v2",
+    "branch"       : "Vampire",
     "remote"       : "diva-ssh"
   },
   { 
     "repository"   : "Miku_vendor_xiaomi_mona",
     "target_path"  : "vendor/xiaomi/mona",
-    "branch"       : "Udon_v2",
+    "branch"       : "Vampire",
     "remote"       : "diva-ssh"
   }
 ]
